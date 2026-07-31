@@ -1,0 +1,359 @@
+/* ========================= */
+/* PROFILE PAGE */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+    background:#fafafa;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.profile-hero{
+    width:100%;
+    min-height:70vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../assets/images/merapi.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.profile-hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.profile-hero p{
+    font-size:18px;
+    max-width:800px;
+    margin:auto;
+    line-height:30px;
+}
+
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    font-size:36px;
+    color:#2e7d32;
+    margin-bottom:25px;
+}
+
+section p{
+    line-height:30px;
+    color:#555;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.card svg{
+    font-size:45px;
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#2e7d32;
+}
+
+.card p{
+    color:#666;
+}
+
+/* ========================= */
+/* DEMOGRAFI */
+/* ========================= */
+
+.statistic-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.statistic-card{
+    background:white;
+    border-radius:12px;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.statistic-card h1{
+    color:#2e7d32;
+    font-size:40px;
+}
+
+.statistic-card p{
+    margin-top:10px;
+}
+
+/* ========================= */
+/* VISI MISI */
+/* ========================= */
+
+.vision{
+    background:#2e7d32;
+    color:white;
+}
+
+.vision h2{
+    color:white;
+}
+
+.vision p{
+    color:white;
+}
+
+.mission ul{
+    margin-top:25px;
+    padding-left:20px;
+}
+
+.mission li{
+    margin-bottom:15px;
+    line-height:28px;
+}
+
+/* ========================= */
+/* POTENSI */
+/* ========================= */
+
+.potential-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.potential-card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.potential-card:hover{
+    transform:translateY(-10px);
+}
+
+.potential-icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+/* ========================= */
+/* STRUKTUR */
+/* ========================= */
+
+.structure-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.structure-card{
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.structure-card img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.structure-card h4{
+    color:#2e7d32;
+}
+
+/* ========================= */
+/* SAMBUTAN */
+/* ========================= */
+
+.sambutan{
+    background:#f5f5f5;
+}
+
+.sambutan-box{
+    background:white;
+    border-left:6px solid #2e7d32;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.sambutan-box p{
+    margin-top:15px;
+}
+
+/* ========================= */
+/* LOKASI */
+/* ========================= */
+
+.location{
+    text-align:center;
+}
+
+.location iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+    margin-top:30px;
+}
+
+.location a{
+    display:inline-block;
+    margin-top:30px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.location a:hover{
+    background:#1b5e20;
+}
+
+/* ========================= */
+/* FOOTER PROFILE */
+/* ========================= */
+
+.profile-footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.profile-footer h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+.profile-footer p{
+    color:#ddd;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:992px){
+
+.about-grid{
+    grid-template-columns:1fr;
+}
+
+.profile-hero h1{
+    font-size:38px;
+}
+
+section{
+    padding:60px 7%;
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-hero{
+    min-height:55vh;
+}
+
+.profile-hero h1{
+    font-size:30px;
+}
+
+.profile-hero p{
+    font-size:16px;
+}
+
+section h2{
+    font-size:28px;
+}
+
+.card-grid,
+.structure-grid,
+.statistic-grid,
+.potential-grid{
+    grid-template-columns:1fr;
+}
+
+}

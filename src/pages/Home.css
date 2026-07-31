@@ -1,0 +1,63 @@
+.home{
+    background:#f7f7f7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.about{
+    padding:90px 0;
+    background:white;
+}
+
+.about h2{
+    font-size:40px;
+    color:#1b5e20;
+    margin:20px 0;
+}
+
+.about p{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+}
+
+.section-title{
+    display:inline-block;
+    padding:8px 18px;
+    background:#e8f5e9;
+    color:#2e7d32;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.statistic-section{
+    padding:80px 0;
+}
+
+.umkm-section{
+    padding:90px 0;
+    background:white;
+}
+
+.umkm-section h2{
+    font-size:40px;
+    margin-top:20px;
+    color:#1b5e20;
+}
+
+.subtitle{
+    margin-top:15px;
+    color:#666;
+    font-size:18px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
