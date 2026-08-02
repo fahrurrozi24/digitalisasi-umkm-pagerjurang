@@ -62,15 +62,20 @@ export default function Home() {
               />
 
               <CardUMKM
-                nama="Kopi Pagerjurang"
-                kategori="Minuman"
+                nama="Jahe Srikandi Merapi"
+                kategori="Jamu"
               />
 
               <CardUMKM
-                nama="Batik Pagerjurang"
-                kategori="Kerajinan"
+                nama="Manggleng"
+                kategori="Makanan"
               />
 
+              <CardUMKM
+                nama="Bakso Goreng"
+                kategori="Makanan"
+              />
+              
             </div>
 
           </div>
