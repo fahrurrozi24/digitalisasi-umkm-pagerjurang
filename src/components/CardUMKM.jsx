@@ -1,32 +1,29 @@
-function CardUMKM({ nama, kategori }) {
+import "./CardUMKM.css";
+
+function CardUMKM({ nama, kategori, gambar }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        borderRadius: "10px",
-        overflow: "hidden",
-        boxShadow: "0 2px 10px rgba(0,0,0,.1)",
-      }}
-    >
+    <div className="card-umkm">
+
       <img
-        src="https://placehold.co/400x250"
+        src={gambar}
         alt={nama}
-        style={{
-          width: "100%",
-          height: "220px",
-          objectFit: "cover",
-        }}
+        className="card-image"
       />
 
-      <div
-        style={{
-          padding: "20px",
-        }}
-      >
+      <div className="card-overlay">
+
+        <span className="card-category">
+          {kategori}
+        </span>
+
         <h3>{nama}</h3>
 
-        <p>{kategori}</p>
+        <button>
+          Lihat Detail →
+        </button>
+
       </div>
+
     </div>
   );
 }
