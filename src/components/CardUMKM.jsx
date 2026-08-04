@@ -3,7 +3,6 @@ import "./CardUMKM.css";
 function CardUMKM({ nama, kategori, gambar }) {
   return (
     <div className="card-umkm">
-
       <img
         src={gambar}
         alt={nama}
@@ -11,19 +10,12 @@ function CardUMKM({ nama, kategori, gambar }) {
       />
 
       <div className="card-overlay">
-
-        <span className="card-category">
-          {kategori}
-        </span>
+        <span className="card-category">{kategori}</span>
 
         <h3>{nama}</h3>
 
-        <button>
-          Lihat Detail →
-        </button>
-
+        <button>Lihat Detail</button>
       </div>
-
     </div>
   );
 }

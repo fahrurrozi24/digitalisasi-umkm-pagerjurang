@@ -1,216 +1,164 @@
-.home{
-
-    background:#fafafa;
-}
-
 /* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+.home{
+    background:#ffffff;
+}
 
 .container{
-
     width:90%;
-
     max-width:1200px;
-
     margin:auto;
-}
-
-/* ========================= */
-
-.about{
-
-    padding:90px 0;
-
-    text-align:center;
 }
 
 .section-title{
-
     display:inline-block;
-
-    background:#2E7D32;
-
-    color:white;
-
-    padding:10px 22px;
-
+    padding:8px 18px;
+    background:#E8F5E9;
+    color:#2E7D32;
     border-radius:30px;
-
     font-size:14px;
-
-    letter-spacing:2px;
-
-    margin-bottom:25px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:15px;
 }
 
-.about h2{
-
+section h2{
     font-size:42px;
-
     color:#222;
-
-    margin:20px 0;
+    margin-bottom:20px;
 }
 
-.about p{
-
-    max-width:900px;
-
-    margin:auto;
-
-    line-height:34px;
-
-    font-size:18px;
-
-    color:#555;
+section p{
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
 }
 
 /* ========================= */
-
-.statistic-section{
-
-    padding-bottom:90px;
-}
-
+/* ABOUT */
 /* ========================= */
 
-.umkm-section{
-
+.about{
     padding:90px 0;
-
     background:white;
 }
 
-.umkm-section h2{
-
-    text-align:center;
-
-    font-size:42px;
-
-    margin:20px 0;
-}
-
-.subtitle{
-
-    text-align:center;
-
-    max-width:700px;
-
-    margin:0 auto 60px;
-
-    color:#666;
-
-    font-size:18px;
-
-    line-height:32px;
+.about p{
+    max-width:900px;
 }
 
 /* ========================= */
+/* STATISTIC */
+/* ========================= */
+
+.statistic-section{
+    padding:30px 0 90px;
+    background:white;
+}
+
+/* ========================= */
+/* UMKM */
+/* ========================= */
+
+.umkm-section{
+    padding:90px 0;
+    background:#f8f9fa;
+}
+
+.subtitle{
+    max-width:700px;
+    margin-bottom:45px;
+}
 
 .card-grid{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
 }
 
 /* ========================= */
+/* RESPONSIVE TABLET */
+/* ========================= */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
-.about h2{
+    section h2{
+        font-size:34px;
+    }
 
-font-size:34px;
+    section p{
+        font-size:16px;
+    }
 
-}
-
-.umkm-section h2{
-
-font-size:34px;
-
-}
+    .about,
+    .umkm-section{
+        padding:70px 0;
+    }
 
 }
 
 /* ========================= */
+/* RESPONSIVE MOBILE */
+/* ========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.container{
+    .container{
+        width:92%;
+    }
 
-width:92%;
-}
+    section h2{
+        font-size:28px;
+        line-height:1.4;
+    }
 
-.about{
+    section p{
+        font-size:15px;
+    }
 
-padding:70px 0;
-}
+    .about{
+        padding:60px 0;
+        text-align:center;
+    }
 
-.about h2{
+    .statistic-section{
+        padding:20px 0 60px;
+    }
 
-font-size:28px;
-}
+    .umkm-section{
+        padding:60px 0;
+        text-align:center;
+    }
 
-.about p{
+    .subtitle{
+        margin:20px auto 40px;
+    }
 
-font-size:16px;
-
-line-height:30px;
-}
-
-.umkm-section{
-
-padding:70px 0;
-}
-
-.umkm-section h2{
-
-font-size:28px;
-}
-
-.subtitle{
-
-font-size:16px;
-
-line-height:28px;
-
-margin-bottom:40px;
-}
-
-.card-grid{
-
-grid-template-columns:1fr;
-
-gap:20px;
-}
+    .card-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
 
 }
 
 /* ========================= */
+/* HP KECIL */
+/* ========================= */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-.section-title{
+    section h2{
+        font-size:24px;
+    }
 
-font-size:11px;
+    .section-title{
+        font-size:12px;
+    }
 
-padding:8px 18px;
-}
-
-.about h2{
-
-font-size:24px;
-}
-
-.about p{
-
-font-size:15px;
-}
-
-.subtitle{
-
-font-size:15px;
-}
+    section p{
+        font-size:14px;
+    }
 
 }
