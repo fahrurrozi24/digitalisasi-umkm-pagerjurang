@@ -1,3 +1,5 @@
+import "./Statistic.css";
+
 function Statistic() {
   const data = [
     {
@@ -19,25 +21,9 @@ function Statistic() {
   ];
 
   return (
-    <section
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(4,1fr)",
-        gap: "20px",
-        marginTop: "50px",
-      }}
-    >
+    <section className="statistic">
       {data.map((item) => (
-        <div
-          key={item.title}
-          style={{
-            background: "#2E7D32",
-            color: "white",
-            padding: "30px",
-            borderRadius: "10px",
-            textAlign: "center",
-          }}
-        >
+        <div className="stat-card" key={item.title}>
           <h1>{item.value}</h1>
           <h3>{item.title}</h3>
         </div>

@@ -1,0 +1,85 @@
+.statistic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.stat-card {
+  background: #2e7d32;
+  color: white;
+  padding: 35px 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.18);
+}
+
+.stat-card h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.stat-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width:992px){
+
+  .statistic{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width:768px){
+
+  .statistic{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:35px;
+  }
+
+  .stat-card{
+
+    padding:25px 15px;
+  }
+
+  .stat-card h1{
+
+    font-size:32px;
+  }
+
+  .stat-card h3{
+
+    font-size:18px;
+  }
+
+}
+
+/* HP kecil */
+
+@media (max-width:480px){
+
+  .statistic{
+
+    grid-template-columns:1fr;
+  }
+
+}
