@@ -2,7 +2,7 @@ import "./Hero.css";
 import merapi from "../assets/images/Gunung Merapi.jpeg";
 import { useNavigate } from "react-router-dom";
 
-export default function Hero() {
+function Hero() {
   const navigate = useNavigate();
 
   return (
@@ -14,6 +14,7 @@ export default function Hero() {
     >
       <div className="hero-overlay">
         <div className="hero-content">
+
           <span className="hero-tag">
             WEBSITE RESMI PADUKUHAN PAGERJURANG
           </span>
@@ -21,18 +22,17 @@ export default function Hero() {
           <h1>
             Digitalisasi Profil
             <br />
-            Padukuhan Pagerjurang,
-            <br />
-            Kalurahan Kepuharjo
+            Padukuhan Pagerjurang
           </h1>
 
           <p>
             Menyajikan informasi mengenai profil Padukuhan Pagerjurang,
-            UMKM lokal, potensi wisata, berita kegiatan masyarakat,
-            galeri dokumentasi, serta informasi kontak secara digital.
+            potensi UMKM, wisata, berita, galeri kegiatan, dan informasi
+            kontak secara digital sebagai media informasi masyarakat.
           </p>
 
           <div className="hero-button">
+
             <button
               className="btn-primary"
               onClick={() => navigate("/umkm")}
@@ -46,9 +46,13 @@ export default function Hero() {
             >
               Tentang Pagerjurang
             </button>
+
           </div>
+
         </div>
       </div>
     </section>
   );
 }
+
+export default Hero;
