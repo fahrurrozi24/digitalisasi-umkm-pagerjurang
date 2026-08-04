@@ -1,47 +1,59 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
-  return (
-    <nav
-      style={{
-        background: "#2E7D32",
-        color: "white",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "18px 50px",
-        position: "sticky",
-        top: 0,
-        zIndex: 100,
-      }}
-    >
-      <h2 style={{ margin: 0 }}>
-        Pagerjurang
-      </h2>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      <div
-        style={{
-          display: "flex",
-          gap: "30px",
-        }}
-      >
-        <Link style={menu} to="/">Home</Link>
-        <Link style={menu} to="/profile">Profil</Link>
-        <Link style={menu} to="/umkm">UMKM</Link>
-        <Link style={menu} to="/tourism">Wisata</Link>
-        <Link style={menu} to="/news">Berita</Link>
-        <Link style={menu} to="/gallery">Galeri</Link>
-        <Link style={menu} to="/contact">Kontak</Link>
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
+        {/* Logo */}
+        <Link to="/" className="logo">
+          Pagerjurang
+        </Link>
+
+        {/* Tombol Hamburger */}
+        <div
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
+
+        {/* Menu */}
+        <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+
+          <Link to="/profile" onClick={() => setMenuOpen(false)}>
+            Profil
+          </Link>
+
+          <Link to="/umkm" onClick={() => setMenuOpen(false)}>
+            UMKM
+          </Link>
+
+          <Link to="/tourism" onClick={() => setMenuOpen(false)}>
+            Wisata
+          </Link>
+
+          <Link to="/news" onClick={() => setMenuOpen(false)}>
+            Berita
+          </Link>
+
+          <Link to="/gallery" onClick={() => setMenuOpen(false)}>
+            Galeri
+          </Link>
+
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>
+            Kontak
+          </Link>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
-
-const menu = {
-  color: "white",
-  textDecoration: "none",
-  fontWeight: "bold",
-  fontSize: "17px",
-};
 
 export default Navbar;
