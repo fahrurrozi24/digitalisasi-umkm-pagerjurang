@@ -1,133 +1,257 @@
-.hero{
-    width:100%;
-    height:100vh;
+.hero {
+  width: 100%;
+  min-height: 100vh;
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    position:relative;
+  position: relative;
 
-    display:flex;
-    align-items:center;
+  display: flex;
+  align-items: center;
 }
 
-.hero-overlay{
+.hero-overlay {
+  width: 100%;
+  min-height: 100vh;
 
-    width:100%;
-    height:100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.45)
+  );
 
-    background:linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.45)
-    );
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    padding-left:8%;
-    color:white;
+  display: flex;
+  align-items: center;
 }
 
-.hero-tag{
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 
-    width:max-content;
+  padding: 0 60px;
 
-    background:#2E7D32;
-
-    padding:10px 22px;
-
-    border-radius:30px;
-
-    font-size:14px;
-
-    letter-spacing:2px;
-
-    margin-bottom:25px;
+  color: white;
 }
 
-.hero h1{
+.hero-tag {
+  display: inline-block;
 
-    font-size:68px;
+  background: #2e7d32;
 
-    line-height:1.2;
+  padding: 10px 24px;
 
-    margin-bottom:25px;
+  border-radius: 30px;
 
-    max-width:800px;
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 25px;
 }
 
-.hero p{
+.hero h1 {
+  font-size: 68px;
 
-    width:700px;
+  line-height: 1.15;
 
-    font-size:21px;
+  margin-bottom: 25px;
 
-    line-height:1.8;
-
-    color:#f5f5f5;
-
-    margin-bottom:40px;
+  max-width: 850px;
 }
 
-.hero-button{
+.hero p {
+  max-width: 700px;
 
-    display:flex;
+  font-size: 21px;
 
-    gap:20px;
+  line-height: 1.8;
+
+  margin-bottom: 40px;
 }
 
-.btn-primary{
+.hero-button {
+  display: flex;
 
-    background:#FFD54F;
+  gap: 20px;
 
-    color:#222;
-
-    border:none;
-
-    padding:18px 40px;
-
-    border-radius:8px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
+  flex-wrap: wrap;
 }
 
-.btn-primary:hover{
+.btn-primary {
+  background: #ffd54f;
 
-    background:#FFC107;
+  color: #222;
 
-    transform:translateY(-3px);
+  border: none;
+
+  padding: 18px 40px;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
 }
 
-.btn-secondary{
+.btn-primary:hover {
+  background: #ffc107;
 
-    background:transparent;
-
-    color:white;
-
-    border:2px solid white;
-
-    padding:18px 40px;
-
-    border-radius:8px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
+  transform: translateY(-3px);
 }
 
-.btn-secondary:hover{
+.btn-secondary {
+  background: transparent;
 
-    background:white;
+  color: white;
 
-    color:#222;
+  border: 2px solid white;
+
+  padding: 18px 40px;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: white;
+
+  color: #222;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+  .hero-content {
+    padding: 0 40px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-overlay {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+
+    padding: 110px 25px 60px;
+
+    text-align: left;
+  }
+
+  .hero-tag {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    padding: 8px 18px;
+
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+
+    font-size: 36px;
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+    max-width: 100%;
+  }
+
+  .hero p {
+
+    max-width: 100%;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+  }
+
+  .hero-button {
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+
+    width: 100%;
+
+    padding: 15px;
+
+    font-size: 16px;
+  }
+
+}
+
+/* ========================= */
+/* HP KECIL */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .hero-content {
+    padding: 100px 20px 50px;
+  }
+
+  .hero h1 {
+
+    font-size: 30px;
+
+    line-height: 1.3;
+  }
+
+  .hero p {
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .hero-tag {
+
+    font-size: 10px;
+
+    padding: 7px 15px;
+  }
+
 }

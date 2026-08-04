@@ -10,33 +10,35 @@ export default function Hero() {
       }}
     >
       <div className="hero-overlay">
+        <div className="hero-content">
+          <span className="hero-tag">
+            WEBSITE RESMI PADUKUHAN PAGERJURANG
+          </span>
 
-        <span className="hero-tag">
-          WEBSITE RESMI PADUKUHAN PAGERJURANG
-        </span>
+          <h1>
+            Digitalisasi Profil
+            <br />
+            Padukuhan Pagerjurang,
+            <br />
+            Kalurahan Kepuharjo
+          </h1>
 
-        <h1>
-          Digitalisasi Profile
-          <br />
-          Padukuhan Pagerjurang, Kalurahan Kepuharjo
-        </h1>
+          <p>
+            Menyajikan informasi mengenai profil Padukuhan Pagerjurang,
+            UMKM lokal, potensi wisata, berita kegiatan masyarakat,
+            galeri dokumentasi, serta informasi kontak secara digital.
+          </p>
 
-        <p>
-          Menyajikan informasi mengenai profile Padukuhan Pagerjurang,
-          UMKM lokal, potensi wisata, berita kegiatan masyarakat,
-          galeri dokumentasi, serta informasi kontak secara digital.
-        </p>
+          <div className="hero-button">
+            <button className="btn-primary">
+              Jelajahi UMKM
+            </button>
 
-        <div className="hero-button">
-          <button className="btn-primary">
-            Jelajahi UMKM
-          </button>
-
-          <button className="btn-secondary">
-            Tentang Pagerjurang
-          </button>
+            <button className="btn-secondary">
+              Tentang Pagerjurang
+            </button>
+          </div>
         </div>
-
       </div>
     </section>
   );
