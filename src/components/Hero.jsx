@@ -5,7 +5,7 @@ import CardUMKM from "../components/CardUMKM";
 import slondok from "../assets/images/Slondok.jpg";
 import jahe from "../assets/images/Wedang Jahe.jpg";
 import manggleng from "../assets/images/Manggleng.jpg";
-import bakso goreng from "../assets/images/Bakso Goreng.jpg";
+import baksogoreng from "../assets/images/Bakso Goreng.jpg";
 
 import "./Home.css";
 
