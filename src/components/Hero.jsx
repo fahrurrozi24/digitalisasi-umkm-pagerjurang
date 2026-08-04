@@ -1,124 +1,43 @@
-import Hero from "../components/Hero";
-import Statistic from "../components/Statistic";
-import CardUMKM from "../components/CardUMKM";
+import "./Hero.css";
+import merapi from "../assets/images/Gunung Merapi.jpeg";
 
-import slondok from "../assets/images/Slondok.jpg";
-import jahe from "../assets/images/Wedang Jahe.jpg";
-import manggleng from "../assets/images/Manggleng.jpg";
-import baksogoreng from "../assets/images/Bakso Goreng.jpg";
-
-import "./Home.css";
-
-export default function Home() {
+export default function Hero() {
   return (
-    <>
-      <Hero />
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `url(${merapi})`,
+      }}
+    >
+      <div className="hero-overlay">
 
-      <main className="home">
+        <span className="hero-tag">
+          WEBSITE RESMI PADUKUHAN PAGERJURANG
+        </span>
 
-        {/* ===================== */}
-        {/* Tentang */}
-        {/* ===================== */}
+        <h1>
+          Digitalisasi Profile
+          <br />
+          Padukuhan Pagerjurang, Kalurahan Kepuharjo
+        </h1>
 
-        <section className="about">
+        <p>
+          Menyajikan informasi mengenai profile Padukuhan Pagerjurang,
+          UMKM lokal, potensi wisata, berita kegiatan masyarakat,
+          galeri dokumentasi, serta informasi kontak secara digital.
+        </p>
 
-          <div className="container">
+        <div className="hero-button">
+          <button className="btn-primary">
+            Jelajahi UMKM
+          </button>
 
-            <span className="section-title">
-              Selamat Datang
-            </span>
+          <button className="btn-secondary">
+            Tentang Pagerjurang
+          </button>
+        </div>
 
-            <h2>
-              Padukuhan Pagerjurang
-            </h2>
-
-            <p>
-              Padukuhan Pagerjurang merupakan salah satu padukuhan di
-              Kalurahan Kepuharjo, Kapanewon Cangkringan, Kabupaten Sleman,
-              Daerah Istimewa Yogyakarta. Masyarakat Pagerjurang memiliki
-              berbagai potensi di bidang pertanian, UMKM, serta wisata yang
-              terus berkembang.
-
-              Website ini dibuat sebagai media informasi digital untuk
-              memperkenalkan profil padukuhan, produk UMKM, potensi wisata,
-              berita kegiatan masyarakat, hingga dokumentasi kegiatan KKN
-              Universitas Respati Yogyakarta.
-            </p>
-
-          </div>
-
-        </section>
-
-        {/* ===================== */}
-        {/* Statistik */}
-        {/* ===================== */}
-
-        <section className="statistic-section">
-
-          <div className="container">
-
-            <Statistic />
-
-          </div>
-
-        </section>
-
-        {/* ===================== */}
-        {/* UMKM */}
-        {/* ===================== */}
-
-        <section className="umkm-section">
-
-          <div className="container">
-
-            <span className="section-title">
-              Produk Unggulan
-            </span>
-
-            <h2>
-              UMKM Padukuhan Pagerjurang
-            </h2>
-
-            <p className="subtitle">
-              Berbagai produk unggulan hasil karya masyarakat
-              Padukuhan Pagerjurang yang memiliki kualitas
-              serta cita rasa khas.
-            </p>
-
-            <div className="card-grid">
-
-              <CardUMKM
-                nama="Slondok"
-                kategori="Makanan Ringan"
-                gambar={slondok}
-              />
-
-              <CardUMKM
-                nama="Jahe Srikandi Merapi"
-                kategori="Minuman Herbal"
-                gambar={jahe}
-              />
-
-              <CardUMKM
-                nama="Manggleng"
-                kategori="Makanan Ringan"
-                gambar={manggleng}
-              />
-
-              <CardUMKM
-                nama="Bakso Goreng"
-                kategori="Olahan Makanan"
-                gambar={bakso}
-              />
-
-            </div>
-
-          </div>
-
-        </section>
-
-      </main>
-
-    </>
+      </div>
+    </section>
   );
 }

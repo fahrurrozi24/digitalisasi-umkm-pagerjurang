@@ -1,6 +1,12 @@
 import Hero from "../components/Hero";
 import Statistic from "../components/Statistic";
 import CardUMKM from "../components/CardUMKM";
+
+import slondok from "../assets/images/Slondok.jpg";
+import jahe from "../assets/images/Wedang Jahe.jpg";
+import manggleng from "../assets/images/Manggleng.jpg";
+import bakso_goreng from "../assets/images/Bakso Goreng.jpg";
+
 import "./Home.css";
 
 export default function Home() {
@@ -10,8 +16,12 @@ export default function Home() {
 
       <main className="home">
 
+        {/* ===================== */}
         {/* Tentang */}
+        {/* ===================== */}
+
         <section className="about">
+
           <div className="container">
 
             <span className="section-title">
@@ -23,22 +33,40 @@ export default function Home() {
             </h2>
 
             <p>
-              Padukuhan Pagerjurang memiliki berbagai potensi salah satunya UMKM yang dapat dikembangkan. Namun, informasi mengenai pelaku usaha dan produk yang dihasilkan masih belum terdokumentasi dan dipublikasikan secara optimal melalui media digital. Oleh karena itu, digitalisasi profil UMKM menjadi salah satu upaya untuk memperkenalkan potensi lokal sekaligus mendukung promosi dan pengembangan ekonomi masyarakat..
+              Padukuhan Pagerjurang merupakan salah satu padukuhan di
+              Kalurahan Kepuharjo, Kapanewon Cangkringan, Kabupaten Sleman,
+              Daerah Istimewa Yogyakarta. Masyarakat Pagerjurang memiliki
+              berbagai potensi di bidang pertanian, UMKM, serta wisata yang
+              terus berkembang.
+
+              Website ini dibuat sebagai media informasi digital untuk
+              memperkenalkan profil padukuhan, produk UMKM, potensi wisata,
+              berita kegiatan masyarakat, hingga dokumentasi kegiatan KKN
+              Universitas Respati Yogyakarta.
             </p>
 
           </div>
+
         </section>
 
+        {/* ===================== */}
         {/* Statistik */}
+        {/* ===================== */}
+
         <section className="statistic-section">
+
           <div className="container">
 
             <Statistic />
 
           </div>
+
         </section>
 
+        {/* ===================== */}
         {/* UMKM */}
+        {/* ===================== */}
+
         <section className="umkm-section">
 
           <div className="container">
@@ -47,35 +75,42 @@ export default function Home() {
               Produk Unggulan
             </span>
 
-            <h2>UMKM Pagerjurang</h2>
+            <h2>
+              UMKM Padukuhan Pagerjurang
+            </h2>
 
             <p className="subtitle">
-              Berbagai produk unggulan masyarakat
-              Padukuhan Pagerjurang.
+              Berbagai produk unggulan hasil karya masyarakat
+              Padukuhan Pagerjurang yang memiliki kualitas
+              serta cita rasa khas.
             </p>
 
             <div className="card-grid">
 
               <CardUMKM
                 nama="Slondok"
-                kategori="Makanan"
+                kategori="Makanan Ringan"
+                gambar={slondok}
               />
 
               <CardUMKM
                 nama="Jahe Srikandi Merapi"
-                kategori="Jamu"
+                kategori="Minuman Herbal"
+                gambar={jahe}
               />
 
               <CardUMKM
                 nama="Manggleng"
-                kategori="Makanan"
+                kategori="Makanan Ringan"
+                gambar={manggleng}
               />
 
               <CardUMKM
                 nama="Bakso Goreng"
-                kategori="Makanan"
+                kategori="Olahan Makanan"
+                gambar={bakso}
               />
-              
+
             </div>
 
           </div>
@@ -83,6 +118,7 @@ export default function Home() {
         </section>
 
       </main>
+
     </>
   );
 }
