@@ -85,25 +85,21 @@ function Home() {
 
               <CardUMKM
                 nama="Slondok"
-                kategori="Makanan Ringan"
                 gambar={slondok}
               />
 
               <CardUMKM
                 nama="Jahe Srikandi Merapi"
-                kategori="Minuman Herbal"
                 gambar={jahe}
               />
 
               <CardUMKM
                 nama="Manggleng"
-                kategori="Makanan Ringan"
                 gambar={manggleng}
               />
 
               <CardUMKM
                 nama="Bakso Goreng"
-                kategori="Olahan Makanan"
                 gambar={bakso}
               />
 
