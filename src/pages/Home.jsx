@@ -3,7 +3,7 @@ import Statistic from "../components/Statistic";
 import CardUMKM from "../components/CardUMKM";
 
 import slondok from "../assets/images/Slondok.jpg";
-import jahe from "../assets/images/Jahe Srikandi Merapi.jpg";
+import jahe from "../assets/images/Wedang Jahe.jpg";
 import manggleng from "../assets/images/Manggleng.jpg";
 import bakso from "../assets/images/Bakso Goreng.jpg";
 
