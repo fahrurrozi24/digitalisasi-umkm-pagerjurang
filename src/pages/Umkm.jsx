@@ -5,40 +5,28 @@ function Umkm() {
 
   const umkm = [
     {
-      nama: "Keripik Singkong Bu Siti",
-      kategori: "Makanan",
+      nama: "Manggleng",
+      kategori: "Snack",
       deskripsi:
-        "Olahan singkong renyah dengan berbagai pilihan rasa.",
+        "Olahan singkong tipis dengan rasa pedas manis.",
     },
     {
-      nama: "Kopi Merapi",
-      kategori: "Minuman",
+      nama: "Slondok",
+      kategori: "Snack",
       deskripsi:
-        "Kopi robusta khas lereng Gunung Merapi.",
+        "Camilan dari olahan singkong pilihan dengan berbagai varian rasa.",
     },
     {
-      nama: "Batik Pagerjurang",
-      kategori: "Kerajinan",
+      nama: "Bakso Goreng",
+      kategori: "Camilan",
       deskripsi:
-        "Batik motif alam dan budaya khas Pagerjurang.",
+        "Camilan populer khas Nusantara betekstur garing di luar, empuk di dalam.",
     },
     {
-      nama: "Madu Hutan",
+      nama: "Jahe Srikandi Merapi",
       kategori: "Produk Alam",
       deskripsi:
-        "Madu alami hasil budidaya masyarakat.",
-    },
-    {
-      nama: "Salak Pondoh",
-      kategori: "Pertanian",
-      deskripsi:
-        "Buah salak segar hasil petani Pagerjurang.",
-    },
-    {
-      nama: "Emping Melinjo",
-      kategori: "Makanan",
-      deskripsi:
-        "Emping tradisional buatan warga.",
+        "Jahe segar dengan kualitas tinggi dari lereng Gunung Merapi.",
     },
   ];
 
