@@ -58,8 +58,6 @@ function Umkm() {
             lineHeight: "30px",
           }}
         >
-          Temukan berbagai produk unggulan hasil karya
-          masyarakat Padukuhan Pagerjurang.
         </p>
       </section>
 
