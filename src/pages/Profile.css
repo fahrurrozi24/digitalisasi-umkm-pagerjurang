@@ -10,7 +10,7 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    color:#333;
+    color:#dad4d4;
     background:#fafafa;
 }
 
@@ -21,21 +21,26 @@ body{
 .profile-hero{
     width:100%;
     min-height:70vh;
-    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("../assets/images/merapi.jpg");
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../assets/images/merapi.jpg");
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
+
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:white;
+
+    color:#fff;
     padding:40px;
 }
 
 .profile-hero h1{
     font-size:52px;
     margin-bottom:20px;
+    color:#fff;
 }
 
 .profile-hero p{
@@ -43,6 +48,7 @@ body{
     max-width:800px;
     margin:auto;
     line-height:30px;
+    color:#fff;          /* <-- TAMBAHKAN INI */
 }
 
 /* ========================= */
@@ -102,13 +108,13 @@ section p{
     border-radius:15px;
     padding:30px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    box-shadow:0 5px 15px rgb(251, 250, 250);
     transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgb(255, 253, 253);
 }
 
 .card svg{
@@ -315,34 +321,22 @@ section p{
 /* RESPONSIVE */
 /* ========================= */
 
-@media(max-width:992px){
-
-.about-grid{
-    grid-template-columns:1fr;
-}
-
-.profile-hero h1{
-    font-size:38px;
-}
-
-section{
-    padding:60px 7%;
-}
-
-}
-
 @media(max-width:768px){
 
 .profile-hero{
     min-height:55vh;
+    padding:30px 20px;
 }
 
 .profile-hero h1{
-    font-size:30px;
+    font-size:34px;
+    color:#fff;
 }
 
 .profile-hero p{
     font-size:16px;
+    line-height:28px;
+    color:#fff;
 }
 
 section h2{

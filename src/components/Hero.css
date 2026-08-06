@@ -1,9 +1,17 @@
+/* ========================= */
+/* HERO */
+/* ========================= */
+
 .hero {
   width: 100%;
   min-height: 100vh;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  position: relative;
+
   display: flex;
   align-items: center;
 }
@@ -11,10 +19,12 @@
 .hero-overlay {
   width: 100%;
   min-height: 100vh;
+
   background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.60),
     rgba(0, 0, 0, 0.45)
   );
+
   display: flex;
   align-items: center;
 }
@@ -27,27 +37,45 @@
 
 .hero-tag {
   display: inline-block;
-  background: #2e7d32;
+
+  background: #2E7D32;
+
   padding: 10px 22px;
+
   border-radius: 30px;
+
   font-size: 14px;
+
   letter-spacing: 2px;
+
   margin-bottom: 25px;
+
   font-weight: 600;
 }
 
 .hero h1 {
   font-size: 64px;
+
   line-height: 1.15;
+
   margin-bottom: 25px;
+
+  font-weight: 700;
 }
 
 .hero p {
   font-size: 21px;
+
   line-height: 1.8;
+
   color: #f5f5f5;
+
   margin-bottom: 40px;
 }
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
 
 .hero-button {
   display: flex;
@@ -58,52 +86,171 @@
 .btn-primary,
 .btn-secondary {
   padding: 18px 38px;
+
   border-radius: 10px;
+
   font-size: 18px;
+
+  font-weight: 600;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: all .3s ease;
 }
 
 .btn-primary {
-  background: #ffd54f;
-  border: none;
+  background: #FFD54F;
+
   color: #222;
+
+  border: none;
 }
 
 .btn-primary:hover {
-  background: #ffc107;
+  background: #FFC107;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
 .btn-secondary {
   background: transparent;
+
   color: white;
+
   border: 2px solid white;
 }
 
 .btn-secondary:hover {
   background: white;
+
   color: #222;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(255,255,255,.25);
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    padding: 30px;
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width:992px){
+
+  .hero{
+
+    min-height:90vh;
   }
 
-  .hero h1 {
-    font-size: 38px;
+  .hero-overlay{
+
+    min-height:90vh;
   }
 
-  .hero p {
-    font-size: 16px;
+  .hero h1{
+
+    font-size:48px;
   }
 
-  .hero-button {
-    flex-direction: column;
+  .hero p{
+
+    font-size:18px;
+  }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+  .hero{
+
+    min-height:100vh;
+  }
+
+  .hero-overlay{
+
+    min-height:100vh;
+  }
+
+  .hero-content{
+
+    padding:30px;
+  }
+
+  .hero-tag{
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    padding:8px 18px;
+  }
+
+  .hero h1{
+
+    font-size:38px;
+
+    line-height:1.25;
+
+    margin-bottom:20px;
+  }
+
+  .hero p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+  }
+
+  .hero-button{
+
+    flex-direction:column;
+
+    width:100%;
   }
 
   .btn-primary,
-  .btn-secondary {
-    width: 100%;
+  .btn-secondary{
+
+    width:100%;
+
+    font-size:16px;
+
+    padding:16px;
   }
+
+}
+
+/* ========================= */
+/* HP KECIL */
+/* ========================= */
+
+@media (max-width:480px){
+
+  .hero-content{
+
+    padding:25px;
+  }
+
+  .hero h1{
+
+    font-size:30px;
+  }
+
+  .hero p{
+
+    font-size:15px;
+  }
+
+  .hero-tag{
+
+    font-size:10px;
+  }
+
 }
