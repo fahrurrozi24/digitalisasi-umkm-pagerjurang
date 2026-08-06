@@ -1,27 +1,37 @@
+/* ========================= */
+/* CARD UMKM */
+/* ========================= */
+
 .card-umkm {
   position: relative;
-  height: 320px;
-  border-radius: 18px;
+  height: 330px;
   overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
-  transition: .3s;
+  border-radius: 18px;
+  background: #fff;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition: 0.35s ease;
 }
 
 .card-umkm:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .card-umkm:hover .card-image {
   transform: scale(1.08);
 }
+
+/* ========================= */
+/* OVERLAY */
+/* ========================= */
 
 .card-overlay {
   position: absolute;
@@ -31,49 +41,211 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  padding: 25px;
+  padding: 28px;
 
   background: linear-gradient(
-    rgba(0,0,0,.15),
-    rgba(0,0,0,.75)
+    rgba(0, 0, 0, 0.08),
+    rgba(0, 0, 0, 0.82)
   );
 
-  color: white;
+  color: #fff;
 }
 
 .card-category {
   width: fit-content;
 
-  background: #2E7D32;
+  background: #2e7d32;
 
-  padding: 6px 15px;
+  padding: 7px 18px;
 
   border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 600;
 
   margin-bottom: 15px;
 }
 
 .card-overlay h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  color: white;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
 }
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
 
 .card-overlay button {
   width: fit-content;
 
-  background: #FFD54F;
-
+  background: #ffd54f;
   color: #222;
 
   border: none;
-
-  padding: 12px 20px;
-
   border-radius: 8px;
 
+  padding: 12px 24px;
+
+  font-size: 15px;
+  font-weight: bold;
+
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
 .card-overlay button:hover {
   background: white;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+
+  animation: fade 0.25s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  width: 550px;
+  max-width: 100%;
+
+  background: white;
+
+  border-radius: 18px;
+  overflow: hidden;
+
+  animation: popup 0.3s ease;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.modal-content h2 {
+  padding: 25px 25px 10px;
+
+  color: #2e7d32;
+
+  font-size: 30px;
+}
+
+.modal-content p {
+  padding: 0 25px;
+
+  color: #555;
+
+  line-height: 30px;
+
+  text-align: justify;
+}
+
+.close-btn {
+  margin: 25px;
+
+  background: #2e7d32;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 13px 30px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .card-umkm {
+    height: 280px;
+  }
+
+  .card-overlay {
+    padding: 20px;
+  }
+
+  .card-overlay h3 {
+    font-size: 22px;
+  }
+
+  .card-category {
+    font-size: 12px;
+  }
+
+  .card-overlay button {
+    width: 100%;
+  }
+
+  .modal-content img {
+    height: 220px;
+  }
+
+  .modal-content h2 {
+    font-size: 24px;
+  }
+
+  .modal-content p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .close-btn {
+    width: calc(100% - 50px);
+  }
 }
