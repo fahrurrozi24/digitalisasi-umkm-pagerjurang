@@ -14,7 +14,7 @@ function Profile() {
       <section
         style={{
           background:
-            "linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/merapi.jpg') center/cover",
+            "linear-gradient(rgba(3, 120, 9, 0.55), rgba(0,0,0,.55)), url('/merapi.jpg') center/cover",
           color: "white",
           textAlign: "center",
           padding: "120px 20px",
@@ -70,7 +70,7 @@ function Profile() {
           }}
         >
           Berada di kawasan lereng Gunung Merapi, Pagerjurang memiliki
-          potensi pada sektor pertanian, UMKM, wisata alam, serta budaya
+          potensi pada sektor pertanian, UMKM
           masyarakat yang masih terjaga hingga saat ini.
         </p>
       </section>

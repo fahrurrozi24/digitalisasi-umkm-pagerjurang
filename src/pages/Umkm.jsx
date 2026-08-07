@@ -1,32 +1,55 @@
 import { useState } from "react";
 
+import slondok from "../assets/images/Slondok.jpg";
+import jahe from "../assets/images/Wedang Jahe.jpg";
+import manggleng from "../assets/images/Manggleng.jpg";
+import bakso from "../assets/images/Bakso Goreng.jpg";
+
+import "./Umkm.css";
+
 function Umkm() {
   const [search, setSearch] = useState("");
+  const [selectedUmkm, setSelectedUmkm] = useState(null);
 
   const umkm = [
     {
       nama: "Manggleng",
       kategori: "Snack",
+      gambar: manggleng,
       deskripsi:
-        "Olahan singkong tipis dengan rasa pedas manis.",
+        "Olahan singkong tipis dengan rasa pedas manis yang menjadi salah satu camilan khas masyarakat.",
+      detail:
+        "Manggleng merupakan produk olahan singkong yang dibuat dengan proses sederhana namun menghasilkan cita rasa yang khas. Manggleng memiliki tekstur renyah dengan perpaduan rasa gurih, pedas, dan manis. Produk ini cocok dijadikan camilan sehari-hari maupun oleh-oleh khas daerah.",
     },
+
     {
       nama: "Slondok",
       kategori: "Snack",
+      gambar: slondok,
       deskripsi:
         "Camilan dari olahan singkong pilihan dengan berbagai varian rasa.",
+      detail:
+        "Slondok merupakan salah satu makanan ringan berbahan dasar singkong. Singkong diolah hingga menghasilkan tekstur yang renyah dan rasa yang gurih. Produk ini menjadi salah satu olahan pangan yang dapat dikembangkan sebagai produk unggulan UMKM masyarakat Pagerjurang.",
     },
+
     {
       nama: "Bakso Goreng",
       kategori: "Camilan",
+      gambar: bakso,
       deskripsi:
-        "Camilan populer khas Nusantara betekstur garing di luar, empuk di dalam.",
+        "Camilan populer khas Nusantara dengan tekstur garing di luar dan empuk di dalam.",
+      detail:
+        "Bakso goreng merupakan camilan yang dibuat dari adonan bakso kemudian digoreng hingga menghasilkan tekstur yang renyah di bagian luar. Produk ini cocok dinikmati sebagai camilan bersama keluarga dan dapat menjadi salah satu produk kuliner unggulan masyarakat.",
     },
+
     {
       nama: "Jahe Srikandi Merapi",
       kategori: "Produk Alam",
+      gambar: jahe,
       deskripsi:
-        "Jahe segar dengan kualitas tinggi dari lereng Gunung Merapi.",
+        "Jahe segar dengan kualitas tinggi yang berasal dari kawasan lereng Gunung Merapi.",
+      detail:
+        "Jahe Srikandi Merapi merupakan produk berbahan dasar jahe yang berasal dari kawasan lereng Gunung Merapi. Produk ini memanfaatkan potensi pertanian lokal dan dapat diolah menjadi berbagai produk minuman maupun olahan lainnya.",
     },
   ];
 
@@ -34,198 +57,272 @@ function Umkm() {
     item.nama.toLowerCase().includes(search.toLowerCase())
   );
 
-  return (
-    <>
-      {/* HERO */}
+  /* ========================= */
+  /* DETAIL PRODUK */
+  /* ========================= */
 
-      <section
-        style={{
-          background: "#2e7d32",
-          color: "white",
-          padding: "90px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h1 style={{ fontSize: "45px" }}>
-          UMKM Padukuhan Pagerjurang
-        </h1>
+  if (selectedUmkm) {
+    return (
+      <main className="umkm-detail-page">
 
-        <p
+        {/* HERO DETAIL */}
+
+        <section
+          className="umkm-detail-hero"
           style={{
-            marginTop: "20px",
-            maxWidth: "800px",
-            marginInline: "auto",
-            lineHeight: "30px",
+            backgroundImage: `
+              linear-gradient(
+                rgba(0,0,0,.45),
+                rgba(0,0,0,.65)
+              ),
+              url("${selectedUmkm.gambar}")
+            `,
           }}
         >
-        </p>
-      </section>
+          <div className="detail-hero-content">
 
-      {/* TENTANG */}
+            <span className="detail-category">
+              {selectedUmkm.kategori}
+            </span>
 
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "60px auto",
-          padding: "0 20px",
-        }}
-      >
-        <h2>Tentang UMKM</h2>
+            <h1>{selectedUmkm.nama}</h1>
 
-        <p
-          style={{
-            marginTop: "20px",
-            lineHeight: "30px",
-          }}
-        >
-          UMKM merupakan salah satu penggerak utama
-          perekonomian masyarakat Padukuhan Pagerjurang.
-          Berbagai produk makanan, minuman, kerajinan,
-          hingga hasil pertanian diproduksi langsung oleh
-          warga dengan kualitas yang baik.
-        </p>
-      </section>
+            <p>
+              Produk unggulan masyarakat Padukuhan Pagerjurang
+            </p>
 
-      {/* SEARCH */}
+          </div>
+        </section>
 
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "40px auto",
-          padding: "0 20px",
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Cari UMKM..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          style={{
-            width: "100%",
-            padding: "15px",
-            borderRadius: "10px",
-            border: "1px solid #ccc",
-            fontSize: "16px",
-          }}
-        />
-      </section>
+        {/* ISI DETAIL */}
 
-      {/* LIST */}
+        <section className="detail-content">
 
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "40px auto",
-          padding: "0 20px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "25px",
-          }}
-        >
-          {hasil.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                background: "white",
-                borderRadius: "12px",
-                padding: "25px",
-                boxShadow:
-                  "0 5px 15px rgba(255, 226, 6, 0.98)",
-              }}
-            >
-              <div
-                style={{
-                  height: "180px",
-                  background: "#eeeeee",
-                  borderRadius: "10px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontSize: "60px",
-                }}
-              >
-                🏪
+          <div className="detail-image">
+            <img
+              src={selectedUmkm.gambar}
+              alt={selectedUmkm.nama}
+            />
+          </div>
+
+          <div className="detail-text">
+
+            <span className="detail-label">
+              TENTANG PRODUK
+            </span>
+
+            <h2>{selectedUmkm.nama}</h2>
+
+            <p className="detail-description">
+              {selectedUmkm.deskripsi}
+            </p>
+
+            <p>
+              {selectedUmkm.detail}
+            </p>
+
+            <div className="detail-info">
+
+              <div>
+                <strong>Kategori</strong>
+                <span>{selectedUmkm.kategori}</span>
               </div>
 
-              <h3
-                style={{
-                  marginTop: "20px",
-                }}
-              >
-                {item.nama}
-              </h3>
+              <div>
+                <strong>Asal</strong>
+                <span>Pagerjurang</span>
+              </div>
 
-              <span
-                style={{
-                  background: "#2e7d32",
-                  color: "white",
-                  padding: "5px 12px",
-                  borderRadius: "20px",
-                  fontSize: "13px",
-                }}
-              >
-                {item.kategori}
-              </span>
-
-              <p
-                style={{
-                  marginTop: "15px",
-                  lineHeight: "28px",
-                }}
-              >
-                {item.deskripsi}
-              </p>
-
-              <button
-                style={{
-                  marginTop: "20px",
-                  width: "100%",
-                  padding: "12px",
-                  background: "#2e7d32",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  cursor: "pointer",
-                }}
-              >
-                Lihat Detail
-              </button>
             </div>
-          ))}
+
+            <button
+              className="back-button"
+              onClick={() => setSelectedUmkm(null)}
+            >
+              ← Kembali ke Daftar UMKM
+            </button>
+
+          </div>
+
+        </section>
+
+      </main>
+    );
+  }
+
+  return (
+    <main className="umkm-page">
+
+      {/* ========================= */}
+      {/* HERO */}
+      {/* ========================= */}
+
+      <section className="umkm-hero">
+
+        <div className="umkm-hero-overlay">
+
+          <span className="section-title">
+            PRODUK LOKAL
+          </span>
+
+          <h1>
+            UMKM Padukuhan Pagerjurang
+          </h1>
+
+          <p>
+            Mengenal berbagai produk unggulan hasil karya
+            masyarakat Padukuhan Pagerjurang.
+          </p>
+
         </div>
+
       </section>
 
+      {/* ========================= */}
+      {/* TENTANG */}
+      {/* ========================= */}
+
+      <section className="umkm-about">
+
+        <div className="container">
+
+          <span className="section-title">
+            TENTANG UMKM
+          </span>
+
+          <h2>
+            Produk Unggulan Masyarakat
+          </h2>
+
+          <p>
+            UMKM merupakan salah satu penggerak utama
+            perekonomian masyarakat Padukuhan Pagerjurang.
+            Berbagai produk makanan, minuman, hingga hasil
+            pertanian diproduksi dan dikembangkan oleh
+            masyarakat dengan memanfaatkan potensi lokal.
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* ========================= */}
+      {/* SEARCH */}
+      {/* ========================= */}
+
+      <section className="search-section">
+
+        <div className="container">
+
+          <input
+            type="text"
+            placeholder="Cari produk UMKM..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+
+        </div>
+
+      </section>
+
+      {/* ========================= */}
+      {/* DAFTAR UMKM */}
+      {/* ========================= */}
+
+      <section className="umkm-list">
+
+        <div className="container">
+
+          <div className="umkm-grid">
+
+            {hasil.length > 0 ? (
+
+              hasil.map((item, index) => (
+
+                <div
+                  className="umkm-card"
+                  key={index}
+                >
+
+                  <div className="umkm-card-image">
+
+                    <img
+                      src={item.gambar}
+                      alt={item.nama}
+                    />
+
+                  </div>
+
+                  <div className="umkm-card-content">
+
+                    <span className="category">
+                      {item.kategori}
+                    </span>
+
+                    <h3>
+                      {item.nama}
+                    </h3>
+
+                    <p>
+                      {item.deskripsi}
+                    </p>
+
+                    <button
+                      className="detail-button"
+                      onClick={() =>
+                        setSelectedUmkm(item)
+                      }
+                    >
+                      Lihat Detail
+                    </button>
+
+                  </div>
+
+                </div>
+
+              ))
+
+            ) : (
+
+              <div className="not-found">
+
+                <h3>
+                  Produk tidak ditemukan
+                </h3>
+
+                <p>
+                  Coba gunakan kata kunci lainnya.
+                </p>
+
+              </div>
+
+            )}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ========================= */}
       {/* PENUTUP */}
+      {/* ========================= */}
 
-      <section
-        style={{
-          background: "#f4f4f4",
-          padding: "70px 20px",
-          textAlign: "center",
-          marginTop: "80px",
-        }}
-      >
-        <h2>Dukung UMKM Lokal</h2>
+      <section className="umkm-closing">
 
-        <p
-          style={{
-            marginTop: "20px",
-            maxWidth: "800px",
-            marginInline: "auto",
-            lineHeight: "30px",
-          }}
-        >
+        <h2>
+          Dukung UMKM Lokal
+        </h2>
+
+        <p>
           Dengan membeli produk UMKM Pagerjurang,
           Anda ikut mendukung pertumbuhan ekonomi
           masyarakat dan pelestarian potensi lokal.
         </p>
+
       </section>
-    </>
+
+    </main>
   );
 }
 
