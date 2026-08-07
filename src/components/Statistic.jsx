@@ -4,7 +4,7 @@ function Statistic() {
   const data = [
     {
       title: "UMKM",
-      value: "25+",
+      value: "4",
     },
     {
       title: "Penduduk",
@@ -12,7 +12,7 @@ function Statistic() {
     },
     {
       title: "Wisata",
-      value: "5",
+      value: "-",
     },
     {
       title: "Berita",
