@@ -234,7 +234,7 @@ function Profile() {
         </p>
 
         <a
-          href="https://maps.google.com/?q=Pagerjurang+Kepuharjo"
+          href="https://maps.app.goo.gl/E6cLadFe5asNbvLA9?g_st=aw"
           target="_blank"
           rel="noreferrer"
           style={{
