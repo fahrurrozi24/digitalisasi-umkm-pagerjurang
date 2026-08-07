@@ -171,7 +171,7 @@ function Profile() {
       {/* Visi */}
       <section
         style={{
-          background: "#2e7d32",
+          background: "#f3f4f3",
           color: "white",
           padding: "80px",
         }}
