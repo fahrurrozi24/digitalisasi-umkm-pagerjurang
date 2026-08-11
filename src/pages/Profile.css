@@ -1,353 +1,398 @@
-/* ========================= */
+/* ================================= */
 /* PROFILE PAGE */
-/* ========================= */
+/* ================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.profile-page {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#dad4d4;
-    background:#fafafa;
-}
-
-/* ========================= */
+/* ================================= */
 /* HERO */
-/* ========================= */
+/* ================================= */
 
-.profile-hero{
-    width:100%;
-    min-height:70vh;
-    background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("../assets/images/merapi.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+.profile-hero {
+  min-height: 70vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    color:#fff;
-    padding:40px;
+  padding: 100px 20px;
+
+  text-align: center;
+
+  color: white;
 }
 
-.profile-hero h1{
-    font-size:52px;
-    margin-bottom:20px;
-    color:#fff;
+.profile-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+
+  color: white;
+
+  text-shadow:
+    2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.profile-hero p{
-    font-size:18px;
-    max-width:800px;
-    margin:auto;
-    line-height:30px;
-    color:#fff;          /* <-- TAMBAHKAN INI */
+.profile-hero p {
+  max-width: 800px;
+
+  margin: auto;
+
+  color: white;
+
+  font-size: 18px;
+
+  line-height: 32px;
+
+  font-weight: 500;
+
+  text-shadow:
+    2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* ========================= */
+/* ================================= */
 /* SECTION */
-/* ========================= */
+/* ================================= */
 
-section{
-    padding:80px 10%;
+.profile-section {
+  padding: 80px 20px;
 }
 
-section h2{
-    font-size:36px;
-    color:#2e7d32;
-    margin-bottom:25px;
+.profile-container {
+  max-width: 1200px;
+
+  margin: auto;
 }
 
-section p{
-    line-height:30px;
-    color:#555;
+.profile-section h2 {
+  color: #2e7d32;
+
+  font-size: 36px;
+
+  margin-bottom: 25px;
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
+.profile-section p {
+  color: #555;
+
+  line-height: 32px;
 }
 
-/* ========================= */
-/* ABOUT */
-/* ========================= */
+/* ================================= */
+/* DATA SINGKAT */
+/* ================================= */
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.profile-statistic {
+  background: #f5f5f5;
+
+  padding: 70px 20px;
 }
 
-.about-image img{
-    width:100%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+.profile-statistic h2 {
+  text-align: center;
+
+  color: #2e7d32;
+
+  margin-bottom: 50px;
 }
 
-/* ========================= */
-/* CARD */
-/* ========================= */
+.statistic-grid {
+  max-width: 1200px;
 
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:40px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
 }
 
-.card{
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 5px 15px rgb(251, 250, 250);
-    transition:.3s;
+.statistic-card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgb(255, 253, 253);
+.statistic-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.card svg{
-    font-size:45px;
-    color:#2e7d32;
-    margin-bottom:20px;
+.statistic-icon {
+  font-size: 40px;
+
+  color: #2e7d32;
+
+  margin-bottom: 15px;
 }
 
-.card h3{
-    margin:15px 0;
-    color:#2e7d32;
+.statistic-card h3 {
+  color: #2e7d32;
+
+  margin-bottom: 10px;
 }
 
-.card p{
-    color:#666;
-}
-
-/* ========================= */
-/* DEMOGRAFI */
-/* ========================= */
-
-.statistic-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
-.statistic-card{
-    background:white;
-    border-radius:12px;
-    text-align:center;
-    padding:30px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.statistic-card h1{
-    color:#2e7d32;
-    font-size:40px;
-}
-
-.statistic-card p{
-    margin-top:10px;
-}
-
-/* ========================= */
-/* VISI MISI */
-/* ========================= */
-
-.vision{
-    background:#2e7d32;
-    color:white;
-}
-
-.vision h2{
-    color:white;
-}
-
-.vision p{
-    color:white;
-}
-
-.mission ul{
-    margin-top:25px;
-    padding-left:20px;
-}
-
-.mission li{
-    margin-bottom:15px;
-    line-height:28px;
-}
-
-/* ========================= */
+/* ================================= */
 /* POTENSI */
-/* ========================= */
+/* ================================= */
 
-.potential-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:40px;
+.potential-section {
+  padding: 80px 20px;
 }
 
-.potential-card{
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.3s;
+.potential-section h2 {
+  text-align: center;
+
+  color: #2e7d32;
+
+  margin-bottom: 40px;
 }
 
-.potential-card:hover{
-    transform:translateY(-10px);
+.potential-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
 }
 
-.potential-icon{
-    font-size:50px;
-    margin-bottom:20px;
+.potential-card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s;
 }
 
-/* ========================= */
-/* STRUKTUR */
-/* ========================= */
-
-.structure-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-top:40px;
+.potential-card:hover {
+  transform: translateY(-5px);
 }
 
-.structure-card{
-    background:white;
-    border-radius:15px;
-    text-align:center;
-    padding:30px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+.potential-icon {
+  font-size: 45px;
+
+  margin-bottom: 15px;
 }
 
-.structure-card img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
+.potential-card h3 {
+  color: #2e7d32;
+
+  margin-bottom: 15px;
 }
 
-.structure-card h4{
-    color:#2e7d32;
+.potential-card p {
+  color: #555;
+
+  line-height: 28px;
 }
 
-/* ========================= */
-/* SAMBUTAN */
-/* ========================= */
+/* ================================= */
+/* VISI */
+/* ================================= */
 
-.sambutan{
-    background:#f5f5f5;
+.profile-vision {
+  background: #2e7d32;
+
+  padding: 80px 20px;
+
+  color: white;
 }
 
-.sambutan-box{
-    background:white;
-    border-left:6px solid #2e7d32;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+.profile-vision .profile-container {
+  max-width: 1200px;
 }
 
-.sambutan-box p{
-    margin-top:15px;
+.profile-vision h2 {
+  color: white;
+
+  margin-bottom: 20px;
 }
 
-/* ========================= */
+.profile-vision p {
+  color: white;
+
+  line-height: 32px;
+}
+
+/* ================================= */
+/* MISI */
+/* ================================= */
+
+.profile-mission {
+  padding: 80px 20px;
+}
+
+.profile-mission h2 {
+  color: #2e7d32;
+
+  margin-bottom: 25px;
+}
+
+.profile-mission ul {
+  padding-left: 25px;
+
+  line-height: 40px;
+
+  color: #555;
+}
+
+.profile-mission li {
+  margin-bottom: 5px;
+}
+
+/* ================================= */
 /* LOKASI */
-/* ========================= */
+/* ================================= */
 
-.location{
-    text-align:center;
+.profile-location {
+  background: #f5f5f5;
+
+  padding: 80px 20px;
+
+  text-align: center;
 }
 
-.location iframe{
-    width:100%;
-    height:450px;
-    border:none;
-    border-radius:15px;
-    margin-top:30px;
+.profile-location h2 {
+  color: #2e7d32;
+
+  margin-bottom: 20px;
 }
 
-.location a{
-    display:inline-block;
-    margin-top:30px;
-    background:#2e7d32;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:8px;
-    transition:.3s;
+.profile-location p {
+  max-width: 800px;
+
+  margin: auto;
+
+  line-height: 30px;
+
+  color: #555;
 }
 
-.location a:hover{
-    background:#1b5e20;
+.maps-button {
+  display: inline-block;
+
+  margin-top: 30px;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 14px 28px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
 }
 
-/* ========================= */
-/* FOOTER PROFILE */
-/* ========================= */
+.maps-button:hover {
+  background: #1b5e20;
 
-.profile-footer{
-    background:#1b5e20;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
+  transform: translateY(-2px);
 }
 
-.profile-footer h2{
-    color:white;
-    margin-bottom:15px;
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .profile-hero {
+    min-height: 55vh;
+
+    padding: 80px 20px;
+  }
+
+  .profile-hero h1 {
+    font-size: 32px;
+
+    line-height: 42px;
+  }
+
+  .profile-hero p {
+    font-size: 16px;
+
+    line-height: 28px;
+  }
+
+  .profile-section {
+    padding: 60px 20px;
+  }
+
+  .profile-section h2 {
+    font-size: 28px;
+  }
+
+  .profile-statistic {
+    padding: 60px 20px;
+  }
+
+  .potential-section {
+    padding: 60px 20px;
+  }
+
+  .profile-vision {
+    padding: 60px 20px;
+  }
+
+  .profile-mission {
+    padding: 60px 20px;
+  }
+
+  .profile-location {
+    padding: 60px 20px;
+  }
+
+  .statistic-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .potential-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.profile-footer p{
-    color:#ddd;
-}
+@media (max-width: 480px) {
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
+  .profile-hero h1 {
+    font-size: 28px;
 
-@media(max-width:768px){
+    line-height: 38px;
+  }
 
-.profile-hero{
-    min-height:55vh;
-    padding:30px 20px;
-}
+  .profile-hero p {
+    font-size: 15px;
 
-.profile-hero h1{
-    font-size:34px;
-    color:#fff;
-}
+    line-height: 26px;
+  }
 
-.profile-hero p{
-    font-size:16px;
-    line-height:28px;
-    color:#fff;
-}
-
-section h2{
-    font-size:28px;
-}
-
-.card-grid,
-.structure-grid,
-.statistic-grid,
-.potential-grid{
-    grid-template-columns:1fr;
-}
-
+  .statistic-grid {
+    grid-template-columns: 1fr;
+  }
 }

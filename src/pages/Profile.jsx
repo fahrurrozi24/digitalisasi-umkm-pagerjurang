@@ -3,20 +3,31 @@ import {
   FaUsers,
   FaMountain,
   FaLeaf,
-  FaStore,
-  FaHandshake,
 } from "react-icons/fa";
+
+import merapiJogja from "../assets/images/Merapi Jogja.jpg";
 
 function Profile() {
   return (
     <>
-      {/* Hero */}
+      {/* ================================================= */}
+      {/* HERO */}
+      {/* ================================================= */}
+
       <section
         style={{
-          background:
-            "linear-gradient(rgba(3, 120, 9, 0.55), rgba(0,0,0,.55)), url('/merapi.jpg') center/cover",
+          background: `linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+          ), url("${merapiJogja}") center/cover`,
+
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+
           color: "white",
           textAlign: "center",
+
           padding: "120px 20px",
         }}
       >
@@ -24,33 +35,49 @@ function Profile() {
           style={{
             fontSize: "48px",
             marginBottom: "20px",
+            color: "#ffffff",
+            textShadow: "2px 2px 6px rgba(0,0,0,0.8)",
           }}
         >
           Profile Padukuhan Pagerjurang
         </h1>
 
-<p
-  style={{
-    color: "#ffffff",
-    fontSize: "18px",
-    lineHeight: "32px",
-    fontWeight: "500",
-    opacity: "1",
-    textShadow: "2px 2px 6px rgba(0,0,0,0.8)",
-  }}
->
-</p>
+        <p
+          style={{
+            maxWidth: "800px",
+            margin: "auto",
+
+            fontSize: "18px",
+            lineHeight: "32px",
+
+            color: "#ffffff",
+            fontWeight: "500",
+
+            opacity: "1",
+
+            textShadow: "2px 2px 6px rgba(0,0,0,0.8)",
+          }}
+        >
+          Mengenal lebih dekat Padukuhan Pagerjurang,
+          Kalurahan Kepuharjo, Kecamatan Cangkringan,
+          Kabupaten Sleman, Daerah Istimewa Yogyakarta.
+        </p>
       </section>
 
-      {/* Tentang */}
+      {/* ================================================= */}
+      {/* TENTANG PADUKUHAN */}
+      {/* ================================================= */}
+
       <section
         style={{
-          padding: "80px",
+          padding: "80px 20px",
           maxWidth: "1200px",
           margin: "auto",
         }}
       >
-        <h2>Tentang Padukuhan</h2>
+        <h2>
+          Tentang Padukuhan
+        </h2>
 
         <p
           style={{
@@ -58,9 +85,9 @@ function Profile() {
             lineHeight: "32px",
           }}
         >
-          Padukuhan Pagerjurang merupakan salah satu padukuhan yang berada
-          di Kalurahan Kepuharjo, Kecamatan Cangkringan, Kabupaten Sleman,
-          Daerah Istimewa Yogyakarta.
+          Padukuhan Pagerjurang merupakan salah satu padukuhan
+          yang berada di Kalurahan Kepuharjo, Kecamatan Cangkringan,
+          Kabupaten Sleman, Daerah Istimewa Yogyakarta.
         </p>
 
         <p
@@ -69,17 +96,21 @@ function Profile() {
             lineHeight: "32px",
           }}
         >
-          Berada di kawasan lereng Gunung Merapi, Pagerjurang memiliki
-          potensi pada sektor pertanian, UMKM
-          masyarakat yang masih terjaga hingga saat ini.
+          Berada di kawasan lereng Gunung Merapi, Pagerjurang
+          memiliki potensi pada sektor pertanian dan UMKM.
+          Masyarakat Pagerjurang juga masih menjaga kehidupan
+          sosial, budaya, serta lingkungan di sekitar padukuhan.
         </p>
       </section>
 
-      {/* Statistik */}
+      {/* ================================================= */}
+      {/* DATA SINGKAT */}
+      {/* ================================================= */}
+
       <section
         style={{
           background: "#f5f5f5",
-          padding: "70px",
+          padding: "70px 20px",
         }}
       >
         <h2
@@ -93,8 +124,14 @@ function Profile() {
 
         <div
           style={{
+            maxWidth: "1200px",
+            margin: "auto",
+
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(220px,1fr))",
+
             gap: "25px",
           }}
         >
@@ -112,8 +149,8 @@ function Profile() {
 
           <Card
             icon={<FaMountain />}
-            title="Lereng"
-            value="Merapi"
+            title="Wilayah"
+            value="Lereng Merapi"
           />
 
           <Card
@@ -124,10 +161,13 @@ function Profile() {
         </div>
       </section>
 
-      {/* Potensi */}
+      {/* ================================================= */}
+      {/* POTENSI PADUKUHAN */}
+      {/* ================================================= */}
+
       <section
         style={{
-          padding: "80px",
+          padding: "80px 20px",
           maxWidth: "1200px",
           margin: "auto",
         }}
@@ -144,93 +184,146 @@ function Profile() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(250px,1fr))",
+
             gap: "25px",
           }}
         >
+          {/* PERTANIAN */}
+
           <CardPotensi
             icon="🌾"
             title="Pertanian"
-            desc="Komoditas utama berupa jagung, talas, sayuran, cabai, palawija, dan hasil bumi lainnya."
+            desc="Komoditas pertanian masyarakat berupa jagung, talas, sayuran, cabai, palawija, serta berbagai hasil bumi lainnya."
           />
+
+          {/* UMKM */}
 
           <CardPotensi
             icon="🛍️"
             title="UMKM"
-            desc="Berbagai usaha kuliner, dan produk olahan masyarakat."
-          />
-
-          <CardPotensi
-            icon="🌋"
-            title="Wisata"
-            desc="Panorama alam lereng Gunung Merapi serta wisata edukasi."
+            desc="Berbagai produk UMKM masyarakat Pagerjurang berupa makanan, minuman, serta produk olahan yang menjadi potensi ekonomi lokal."
           />
         </div>
       </section>
 
-      {/* Visi */}
+      {/* ================================================= */}
+      {/* VISI */}
+      {/* ================================================= */}
+
       <section
         style={{
-          background: "#f3f4f3",
+          background: "#2e7d32",
           color: "white",
-          padding: "80px",
+          padding: "80px 20px",
         }}
       >
-        <h2>Visi</h2>
-
-        <p
+        <div
           style={{
-            marginTop: "20px",
-            lineHeight: "32px",
+            maxWidth: "1200px",
+            margin: "auto",
           }}
         >
-          Terwujudnya Padukuhan Pagerjurang yang mandiri,
-          maju, sejahtera, serta mampu mengembangkan potensi lokal
-          melalui pemberdayaan masyarakat.
-        </p>
+          <h2
+            style={{
+              color: "#ffffff",
+            }}
+          >
+            Visi
+          </h2>
+
+          <p
+            style={{
+              marginTop: "20px",
+              lineHeight: "32px",
+              color: "#ffffff",
+            }}
+          >
+            Terwujudnya Padukuhan Pagerjurang yang mandiri,
+            maju, sejahtera, serta mampu mengembangkan potensi
+            lokal melalui pemberdayaan masyarakat.
+          </p>
+        </div>
       </section>
 
-      {/* Misi */}
+      {/* ================================================= */}
+      {/* MISI */}
+      {/* ================================================= */}
+
       <section
         style={{
-          padding: "80px",
+          padding: "80px 20px",
           maxWidth: "1200px",
           margin: "auto",
         }}
       >
-        <h2>Misi</h2>
+        <h2>
+          Misi
+        </h2>
 
         <ul
           style={{
             marginTop: "25px",
+            paddingLeft: "25px",
             lineHeight: "40px",
           }}
         >
-          <li>Meningkatkan kesejahteraan masyarakat.</li>
-          <li>Mengembangkan UMKM lokal.</li>
-          <li>Mengembangkan potensi wisata.</li>
-          <li>Melestarikan budaya lokal.</li>
-          <li>Menjaga kelestarian lingkungan.</li>
+          <li>
+            Meningkatkan kesejahteraan masyarakat.
+          </li>
+
+          <li>
+            Mengembangkan UMKM lokal.
+          </li>
+
+          <li>
+            Mengembangkan potensi pertanian.
+          </li>
+
+          <li>
+            Meningkatkan pemberdayaan masyarakat.
+          </li>
+
+          <li>
+            Melestarikan budaya dan kehidupan sosial masyarakat.
+          </li>
+
+          <li>
+            Menjaga kelestarian lingkungan.
+          </li>
         </ul>
       </section>
 
-      {/* Lokasi */}
+      {/* ================================================= */}
+      {/* LOKASI */}
+      {/* ================================================= */}
+
       <section
         style={{
           background: "#f5f5f5",
-          padding: "80px",
+          padding: "80px 20px",
           textAlign: "center",
         }}
       >
-        <h2>Lokasi Padukuhan</h2>
+        <h2>
+          Lokasi Padukuhan
+        </h2>
 
         <p
           style={{
             marginTop: "20px",
+            lineHeight: "30px",
+            maxWidth: "800px",
+            marginInline: "auto",
           }}
         >
-          Kalurahan Kepuharjo, Kecamatan Cangkringan,
-          Kabupaten Sleman, Daerah Istimewa Yogyakarta.
+          Padukuhan Pagerjurang,
+          Kalurahan Kepuharjo,
+          Kecamatan Cangkringan,
+          Kabupaten Sleman,
+          Daerah Istimewa Yogyakarta.
         </p>
 
         <a
@@ -239,12 +332,19 @@ function Profile() {
           rel="noreferrer"
           style={{
             marginTop: "30px",
+
             display: "inline-block",
+
             background: "#2e7d32",
             color: "white",
+
             padding: "14px 28px",
+
             textDecoration: "none",
+
             borderRadius: "8px",
+
+            transition: "0.3s",
           }}
         >
           Buka Google Maps
@@ -254,48 +354,103 @@ function Profile() {
   );
 }
 
+/* ================================================= */
+/* CARD DATA */
+/* ================================================= */
+
 function Card({ icon, title, value }) {
   return (
     <div
       style={{
         background: "white",
+
         padding: "30px",
+
         borderRadius: "12px",
+
         textAlign: "center",
-        boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+
+        boxShadow:
+          "0 5px 15px rgba(0,0,0,.1)",
+
+        transition: "0.3s",
       }}
     >
       <div
         style={{
           fontSize: "40px",
           color: "#2e7d32",
+          marginBottom: "15px",
         }}
       >
         {icon}
       </div>
 
-      <h3>{value}</h3>
+      <h3
+        style={{
+          margin: "0 0 10px",
+          color: "#2e7d32",
+        }}
+      >
+        {value}
+      </h3>
 
-      <p>{title}</p>
+      <p>
+        {title}
+      </p>
     </div>
   );
 }
 
-function CardPotensi({ icon, title, desc }) {
+/* ================================================= */
+/* CARD POTENSI */
+/* ================================================= */
+
+function CardPotensi({
+  icon,
+  title,
+  desc,
+}) {
   return (
     <div
       style={{
-        background: "#fff",
+        background: "#ffffff",
+
         padding: "30px",
+
         borderRadius: "12px",
-        boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+
+        boxShadow:
+          "0 5px 15px rgba(0,0,0,.1)",
+
+        transition: "0.3s",
       }}
     >
-      <div style={{ fontSize: "45px" }}>{icon}</div>
+      <div
+        style={{
+          fontSize: "45px",
+          marginBottom: "15px",
+        }}
+      >
+        {icon}
+      </div>
 
-      <h3>{title}</h3>
+      <h3
+        style={{
+          color: "#2e7d32",
+          marginBottom: "15px",
+        }}
+      >
+        {title}
+      </h3>
 
-      <p>{desc}</p>
+      <p
+        style={{
+          lineHeight: "28px",
+        }}
+      >
+        {desc}
+      </p>
     </div>
   );
 }
