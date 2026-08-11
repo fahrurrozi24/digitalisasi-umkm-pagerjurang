@@ -1,48 +1,114 @@
-/* ========================= */
+/* ================================================= */
 /* HERO */
-/* ========================= */
+/* ================================================= */
 
 .umkm-hero {
+  position: relative;
+
   min-height: 520px;
 
-  background-size: cover;
-  background-position: center;
-
   display: flex;
+
   justify-content: center;
   align-items: center;
 
   text-align: center;
 
+  overflow: hidden;
+
   color: white;
 }
 
+
+/* ================================================= */
+/* 4 BACKGROUND */
+/* ================================================= */
+
+.umkm-background {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-rows: 1fr 1fr;
+
+  z-index: 0;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  transition: transform .5s ease;
+}
+
+
+/* ================================================= */
+/* OVERLAY */
+/* ================================================= */
+
+.umkm-background-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.65)
+    );
+
+  z-index: 1;
+}
+
+
+/* ================================================= */
+/* HERO CONTENT */
+/* ================================================= */
+
 .umkm-hero-content {
+  position: relative;
+
+  z-index: 2;
+
   max-width: 900px;
+
   padding: 30px;
 }
 
-.umkm-hero-content span,
-.detail-label {
+.umkm-hero-content span {
   display: inline-block;
 
-  background: white;
-  color: #2e7d32;
+  background: #2e7d32;
 
-  padding: 12px 28px;
+  color: white;
+
+  padding: 10px 25px;
 
   border-radius: 30px;
 
   font-size: 14px;
+
   font-weight: bold;
 
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .umkm-hero-content h1 {
   color: white;
 
   font-size: 58px;
+
+  line-height: 1.2;
 
   margin: 30px 0 20px;
 
@@ -55,12 +121,16 @@
   font-size: 20px;
 
   line-height: 32px;
+
+  max-width: 750px;
+
+  margin: auto;
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* ABOUT */
-/* ========================= */
+/* ================================================= */
 
 .umkm-about {
   max-width: 900px;
@@ -84,25 +154,25 @@
 
 .umkm-about h2,
 .umkm-list-header h2 {
+  color: #222;
+
   font-size: 38px;
 
   margin: 15px 0 20px;
-
-  color: #222;
 }
 
 .umkm-about p {
+  color: #666;
+
   font-size: 17px;
 
   line-height: 32px;
-
-  color: #666;
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* SEARCH */
-/* ========================= */
+/* ================================================= */
 
 .umkm-search {
   max-width: 1000px;
@@ -123,6 +193,10 @@
 
   border-radius: 12px;
 
+  background: white;
+
+  color: #333;
+
   font-size: 16px;
 
   outline: none;
@@ -134,13 +208,18 @@
   border-color: #2e7d32;
 
   box-shadow:
-    0 0 0 3px rgba(46,125,50,.12);
+    0 0 0 3px
+    rgba(46,125,50,.12);
+}
+
+.umkm-search input::placeholder {
+  color: #999;
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* LIST */
-/* ========================= */
+/* ================================================= */
 
 .umkm-list {
   max-width: 1200px;
@@ -160,15 +239,18 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
+    repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    );
 
   gap: 30px;
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* CARD */
-/* ========================= */
+/* ================================================= */
 
 .umkm-card {
   background: white;
@@ -178,17 +260,24 @@
   overflow: hidden;
 
   box-shadow:
-    0 8px 25px rgba(0,0,0,.10);
+    0 8px 25px
+    rgba(0,0,0,.10);
 
-  transition: .3s ease;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
 }
 
 .umkm-card:hover {
   transform: translateY(-8px);
 
   box-shadow:
-    0 15px 35px rgba(0,0,0,.16);
+    0 15px 35px
+    rgba(0,0,0,.16);
 }
+
+
+/* IMAGE */
 
 .umkm-card-image {
   height: 230px;
@@ -198,23 +287,28 @@
 
 .umkm-card-image img {
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
 
-  transition: .4s;
+  transition:
+    transform .4s ease;
 }
 
-.umkm-card:hover .umkm-card-image img {
+.umkm-card:hover
+.umkm-card-image img {
   transform: scale(1.07);
 }
+
+
+/* CONTENT */
 
 .umkm-card-content {
   padding: 25px;
 }
 
-.umkm-category,
-.detail-category {
+.umkm-category {
   display: inline-block;
 
   background: #2e7d32;
@@ -229,11 +323,11 @@
 }
 
 .umkm-card-content h3 {
+  color: #222;
+
   font-size: 26px;
 
   margin: 18px 0 12px;
-
-  color: #222;
 }
 
 .umkm-card-content p {
@@ -243,6 +337,9 @@
 
   margin-bottom: 20px;
 }
+
+
+/* BUTTON */
 
 .umkm-card-content button {
   width: 100%;
@@ -259,6 +356,8 @@
 
   font-size: 16px;
 
+  font-weight: 600;
+
   cursor: pointer;
 
   transition: .3s;
@@ -266,22 +365,26 @@
 
 .umkm-card-content button:hover {
   background: #1b5e20;
+
+  transform: translateY(-2px);
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* DETAIL HERO */
-/* ========================= */
+/* ================================================= */
 
 .umkm-detail-hero {
   min-height: 430px;
 
   background-size: cover;
+
   background-position: center;
 
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 
   text-align: center;
@@ -293,31 +396,52 @@
   padding: 30px;
 }
 
+.detail-label {
+  display: inline-block;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 10px 25px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
 .detail-hero-content h1 {
   color: white;
 
   font-size: 55px;
 
+  line-height: 1.2;
+
   margin: 25px 0 10px;
 }
 
 .detail-hero-content p {
-  font-size: 20px;
-
   color: white;
+
+  font-size: 20px;
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* DETAIL */
-/* ========================= */
+/* ================================================= */
 
 .umkm-detail {
   max-width: 1100px;
 
   margin: auto;
 
-  padding: 50px 25px 100px;
+  padding:
+    50px 25px 100px;
 }
 
 
@@ -337,6 +461,8 @@
   cursor: pointer;
 
   margin-bottom: 30px;
+
+  padding: 0;
 }
 
 .back-button:hover {
@@ -349,7 +475,8 @@
 .detail-card {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 50px;
 
@@ -360,8 +487,12 @@
   padding: 35px;
 
   box-shadow:
-    0 10px 35px rgba(0,0,0,.10);
+    0 10px 35px
+    rgba(0,0,0,.10);
 }
+
+
+/* DETAIL IMAGE */
 
 .detail-image {
   height: 500px;
@@ -379,16 +510,33 @@
   object-fit: cover;
 }
 
+
+/* DETAIL CONTENT */
+
 .detail-content {
   padding: 15px 10px;
 }
 
+.detail-category {
+  display: inline-block;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 7px 15px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+}
+
 .detail-content h2 {
+  color: #2e7d32;
+
   font-size: 40px;
 
   margin: 20px 0;
-
-  color: #2e7d32;
 }
 
 .detail-line {
@@ -400,11 +548,11 @@
 }
 
 .detail-content h3 {
+  color: #222;
+
   font-size: 22px;
 
   margin-bottom: 15px;
-
-  color: #222;
 }
 
 .detail-content p {
@@ -420,9 +568,9 @@
 }
 
 
-/* ========================= */
-/* INFO DETAIL */
-/* ========================= */
+/* ================================================= */
+/* DETAIL INFO */
+/* ================================================= */
 
 .detail-info {
   margin-top: 30px;
@@ -459,9 +607,9 @@
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* DETAIL BOTTOM */
-/* ========================= */
+/* ================================================= */
 
 .detail-bottom {
   text-align: center;
@@ -488,9 +636,9 @@
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* NO RESULT */
-/* ========================= */
+/* ================================================= */
 
 .no-result {
   grid-column: 1 / -1;
@@ -503,9 +651,9 @@
 }
 
 
-/* ========================= */
+/* ================================================= */
 /* SUPPORT */
-/* ========================= */
+/* ================================================= */
 
 .umkm-support {
   background: #f5f5f5;
@@ -532,18 +680,62 @@
 }
 
 
-/* ========================= */
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+  .umkm-hero-content h1 {
+    font-size: 46px;
+  }
+
+  .detail-card {
+    gap: 30px;
+  }
+
+  .detail-image {
+    height: 430px;
+  }
+
+}
+
+
+/* ================================================= */
 /* MOBILE */
-/* ========================= */
+/* ================================================= */
 
 @media (max-width: 768px) {
 
+  /* HERO */
+
   .umkm-hero {
-    min-height: 420px;
+    min-height: 500px;
+  }
+
+  .umkm-background {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .umkm-hero-content {
+    padding: 25px 20px;
+  }
+
+  .umkm-hero-content span {
+    font-size: 12px;
+
+    padding: 9px 18px;
   }
 
   .umkm-hero-content h1 {
-    font-size: 38px;
+    font-size: 36px;
+
+    line-height: 45px;
+
+    margin:
+      25px 0 15px;
   }
 
   .umkm-hero-content p {
@@ -552,8 +744,12 @@
     line-height: 27px;
   }
 
+
+  /* ABOUT */
+
   .umkm-about {
-    padding: 60px 20px;
+    padding:
+      60px 20px;
   }
 
   .umkm-about h2,
@@ -561,26 +757,75 @@
     font-size: 30px;
   }
 
+  .umkm-about p {
+    font-size: 16px;
+
+    line-height: 29px;
+  }
+
+
+  /* SEARCH */
+
+  .umkm-search {
+    padding: 0 20px;
+
+    margin-bottom: 45px;
+  }
+
+
+  /* LIST */
+
+  .umkm-list {
+    padding:
+      0 20px 70px;
+  }
+
   .umkm-grid {
     grid-template-columns: 1fr;
   }
 
-  /* DETAIL MOBILE */
+
+  /* DETAIL HERO */
 
   .umkm-detail-hero {
     min-height: 350px;
   }
 
+  .detail-hero-content {
+    padding: 20px;
+  }
+
+  .detail-label {
+    font-size: 12px;
+
+    padding:
+      9px 18px;
+  }
+
   .detail-hero-content h1 {
     font-size: 38px;
+
+    line-height: 45px;
+  }
+
+  .detail-hero-content p {
+    font-size: 17px;
+  }
+
+
+  /* DETAIL */
+
+  .umkm-detail {
+    padding:
+      35px 20px 70px;
   }
 
   .detail-card {
     grid-template-columns: 1fr;
 
-    padding: 20px;
-
     gap: 25px;
+
+    padding: 20px;
   }
 
   .detail-image {
@@ -599,7 +844,12 @@
     font-size: 16px;
 
     line-height: 29px;
+
+    text-align: left;
   }
+
+
+  /* INFO */
 
   .detail-info div {
     flex-direction: column;
@@ -610,4 +860,17 @@
   .detail-info span {
     text-align: left;
   }
+
+
+  /* SUPPORT */
+
+  .umkm-support {
+    padding:
+      60px 20px;
+  }
+
+  .umkm-support h2 {
+    font-size: 28px;
+  }
+
 }
