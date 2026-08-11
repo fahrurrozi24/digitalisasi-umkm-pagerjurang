@@ -20,7 +20,7 @@ function Hero() {
           </span>
 
           <h1>
-            Digitalisasi Profil
+            Profile
             <br />
             Padukuhan Pagerjurang
           </h1>
