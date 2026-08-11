@@ -1,3 +1,6 @@
+import beritaBackground from "../assets/images/Berita.jpeg";
+import "./News.css";
+
 function News() {
   const berita = [
     {
@@ -8,6 +11,7 @@ function News() {
       isi:
         "Masyarakat Padukuhan Pagerjurang melaksanakan kegiatan gotong royong membersihkan lingkungan sebagai bentuk kepedulian terhadap kebersihan dan kesehatan lingkungan.",
     },
+
     {
       judul: "Pelatihan Digitalisasi UMKM",
       tanggal: "15 Juli 2026",
@@ -16,6 +20,7 @@ function News() {
       isi:
         "Pelaku UMKM mengikuti pelatihan pemasaran digital untuk meningkatkan daya saing produk lokal melalui media sosial dan website.",
     },
+
     {
       judul: "Panen Raya Hasil Pertanian",
       tanggal: "10 Juli 2026",
@@ -24,6 +29,7 @@ function News() {
       isi:
         "Petani Pagerjurang berhasil melaksanakan panen raya sebagai bentuk keberhasilan pengelolaan pertanian yang berkelanjutan.",
     },
+
     {
       judul: "Peringatan Hari Kemerdekaan",
       tanggal: "17 Agustus 2026",
@@ -36,159 +42,111 @@ function News() {
 
   return (
     <>
-      {/* Hero */}
-      <section
-        style={{
-          background: "#2e7d32",
-          color: "white",
-          padding: "90px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h1 style={{ fontSize: "45px" }}>
-          Berita Padukuhan Pagerjurang
-        </h1>
+      {/* ========================= */}
+      {/* HERO */}
+      {/* ========================= */}
 
-        <p
-          style={{
-            maxWidth: "800px",
-            margin: "20px auto 0",
-            lineHeight: "30px",
-          }}
-        >
+      <section className="news-hero">
+        <h1>Berita Padukuhan Pagerjurang</h1>
+
+        <p>
           Ikuti informasi terbaru mengenai kegiatan masyarakat,
           pembangunan, UMKM, serta berbagai aktivitas yang berlangsung
           di Padukuhan Pagerjurang.
         </p>
       </section>
 
-      {/* Berita */}
+      {/* ========================= */}
+      {/* BERITA */}
+      {/* ========================= */}
+
       <section
+        className="news-section"
         style={{
-          maxWidth: "1200px",
-          margin: "60px auto",
-          padding: "0 20px",
+          backgroundImage: `linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.65)
+          ), url(${beritaBackground})`,
         }}
       >
-        <h2
-          style={{
-            textAlign: "center",
-            marginBottom: "40px",
-          }}
-        >
-          Berita Terbaru
-        </h2>
+        <div className="news-container">
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-            gap: "25px",
-          }}
-        >
-          {berita.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                background: "white",
-                borderRadius: "15px",
-                overflow: "hidden",
-                boxShadow: "0 5px 15px rgba(0,0,0,.1)",
-              }}
-            >
-              <div
-                style={{
-                  height: "180px",
-                  background: "#f2f2f2",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontSize: "60px",
-                }}
-              >
-                {item.gambar}
+          <div className="news-heading">
+            <span>INFORMASI TERKINI</span>
+
+            <h2>Berita Terbaru</h2>
+
+            <p>
+              Berbagai informasi dan kegiatan terbaru dari
+              masyarakat Padukuhan Pagerjurang.
+            </p>
+          </div>
+
+          <div className="news-grid">
+
+            {berita.map((item, index) => (
+              <div className="news-card" key={index}>
+
+                {/* GAMBAR / ICON */}
+                <div className="news-image">
+                  <span>{item.gambar}</span>
+                </div>
+
+                {/* ISI CARD */}
+                <div className="news-content">
+
+                  <span className="news-category">
+                    {item.kategori}
+                  </span>
+
+                  <h3>
+                    {item.judul}
+                  </h3>
+
+                  <p className="news-date">
+                    {item.tanggal}
+                  </p>
+
+                  <p className="news-description">
+                    {item.isi}
+                  </p>
+
+                  <button
+                    className="news-button"
+                    onClick={() =>
+                      alert(
+                        `${item.judul}\n\n${item.isi}`
+                      )
+                    }
+                  >
+                    Baca Selengkapnya
+                  </button>
+
+                </div>
+
               </div>
+            ))}
 
-              <div style={{ padding: "25px" }}>
-                <span
-                  style={{
-                    background: "#2e7d32",
-                    color: "white",
-                    padding: "5px 12px",
-                    borderRadius: "20px",
-                    fontSize: "13px",
-                  }}
-                >
-                  {item.kategori}
-                </span>
-
-                <h3
-                  style={{
-                    marginTop: "20px",
-                  }}
-                >
-                  {item.judul}
-                </h3>
-
-                <p
-                  style={{
-                    color: "#777",
-                    marginTop: "8px",
-                    fontSize: "14px",
-                  }}
-                >
-                  {item.tanggal}
-                </p>
-
-                <p
-                  style={{
-                    marginTop: "15px",
-                    lineHeight: "28px",
-                  }}
-                >
-                  {item.isi}
-                </p>
-
-                <button
-                  style={{
-                    marginTop: "20px",
-                    background: "#2e7d32",
-                    color: "white",
-                    border: "none",
-                    padding: "12px 20px",
-                    borderRadius: "8px",
-                    cursor: "pointer",
-                  }}
-                >
-                  Baca Selengkapnya
-                </button>
-              </div>
-            </div>
-          ))}
+          </div>
         </div>
       </section>
 
-      {/* Penutup */}
-      <section
-        style={{
-          background: "#f5f5f5",
-          padding: "70px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h2>Tetap Ikuti Informasi Terbaru</h2>
+      {/* ========================= */}
+      {/* PENUTUP */}
+      {/* ========================= */}
 
-        <p
-          style={{
-            maxWidth: "800px",
-            margin: "20px auto",
-            lineHeight: "30px",
-          }}
-        >
-          Website ini menjadi media informasi resmi Padukuhan Pagerjurang
+      <section className="news-footer">
+
+        <h2>
+          Tetap Ikuti Informasi Terbaru
+        </h2>
+
+        <p>
+          Website ini menjadi media informasi Padukuhan Pagerjurang
           untuk menyampaikan berita, kegiatan, pembangunan, serta
           perkembangan UMKM kepada masyarakat.
         </p>
+
       </section>
     </>
   );

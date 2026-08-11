@@ -1,0 +1,480 @@
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.news-hero {
+  background: #2e7d32;
+  color: white;
+
+  padding: 90px 20px;
+
+  text-align: center;
+}
+
+.news-hero h1 {
+  margin: 0;
+
+  font-size: 45px;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+.news-hero p {
+  max-width: 800px;
+
+  margin: 20px auto 0;
+
+  line-height: 30px;
+
+  font-size: 17px;
+
+  color: white;
+}
+
+
+/* ========================= */
+/* NEWS SECTION */
+/* ========================= */
+
+.news-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 700px;
+
+  padding: 80px 20px;
+
+  box-sizing: border-box;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.news-container {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================= */
+/* HEADING */
+/* ========================= */
+
+.news-heading {
+  text-align: center;
+
+  margin-bottom: 50px;
+
+  color: white;
+}
+
+.news-heading span {
+  display: inline-block;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 7px 18px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+.news-heading h2 {
+  margin: 0;
+
+  font-size: 38px;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+.news-heading p {
+  max-width: 700px;
+
+  margin: 15px auto 0;
+
+  color: white;
+
+  line-height: 28px;
+
+  font-size: 16px;
+}
+
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.news-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;
+}
+
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.news-card {
+  background: white;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ========================= */
+/* IMAGE */
+/* ========================= */
+
+.news-image {
+  height: 190px;
+
+  background: #eeeeee;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 65px;
+}
+
+.news-image span {
+  transition: 0.3s ease;
+}
+
+.news-card:hover .news-image span {
+  transform: scale(1.15);
+}
+
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.news-content {
+  padding: 25px;
+}
+
+
+/* ========================= */
+/* CATEGORY */
+/* ========================= */
+
+.news-category {
+  display: inline-block;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 5px 13px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.news-content h3 {
+  margin: 18px 0 0;
+
+  font-size: 21px;
+
+  line-height: 30px;
+
+  color: #222;
+
+  font-weight: 700;
+}
+
+
+/* ========================= */
+/* DATE */
+/* ========================= */
+
+.news-date {
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  color: #888;
+}
+
+
+/* ========================= */
+/* DESCRIPTION */
+/* ========================= */
+
+.news-description {
+  margin-top: 15px;
+
+  color: #555;
+
+  line-height: 28px;
+
+  font-size: 15px;
+}
+
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.news-button {
+  margin-top: 20px;
+
+  padding: 12px 20px;
+
+  background: #2e7d32;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.news-button:hover {
+  background: #1b5e20;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================= */
+/* FOOTER NEWS */
+/* ========================= */
+
+.news-footer {
+  background: #f5f5f5;
+
+  padding: 70px 20px;
+
+  text-align: center;
+}
+
+.news-footer h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  color: #222;
+}
+
+.news-footer p {
+  max-width: 800px;
+
+  margin: 20px auto 0;
+
+  line-height: 30px;
+
+  color: #555;
+}
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .news-hero {
+    padding: 70px 20px;
+  }
+
+  .news-hero h1 {
+    font-size: 34px;
+  }
+
+  .news-hero p {
+    font-size: 15px;
+
+    line-height: 27px;
+  }
+
+  .news-section {
+    padding: 60px 20px;
+
+    background-attachment: scroll;
+
+    background-position: center;
+  }
+
+  .news-heading h2 {
+    font-size: 30px;
+  }
+
+  .news-heading p {
+    font-size: 15px;
+
+    line-height: 26px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .news-image {
+    height: 180px;
+  }
+
+  .news-content {
+    padding: 22px;
+  }
+
+  .news-content h3 {
+    font-size: 20px;
+
+    line-height: 28px;
+  }
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .news-hero {
+    padding: 60px 15px;
+  }
+
+  .news-hero h1 {
+    font-size: 28px;
+  }
+
+  .news-hero p {
+    font-size: 14px;
+
+    line-height: 25px;
+  }
+
+  .news-section {
+    padding: 50px 15px;
+
+    background-position: center center;
+  }
+
+  .news-heading {
+    margin-bottom: 35px;
+  }
+
+  .news-heading span {
+    font-size: 11px;
+  }
+
+  .news-heading h2 {
+    font-size: 27px;
+  }
+
+  .news-heading p {
+    font-size: 14px;
+  }
+
+  .news-card {
+    border-radius: 13px;
+  }
+
+  .news-image {
+    height: 160px;
+
+    font-size: 55px;
+  }
+
+  .news-content {
+    padding: 20px;
+  }
+
+  .news-content h3 {
+    font-size: 19px;
+
+    line-height: 27px;
+  }
+
+  .news-description {
+    font-size: 14px;
+
+    line-height: 26px;
+  }
+
+  .news-button {
+    width: 100%;
+  }
+
+  .news-footer {
+    padding: 55px 20px;
+  }
+
+  .news-footer h2 {
+    font-size: 25px;
+  }
+
+  .news-footer p {
+    font-size: 14px;
+
+    line-height: 26px;
+  }
+}
