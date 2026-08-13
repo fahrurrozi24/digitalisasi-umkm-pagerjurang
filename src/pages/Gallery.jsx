@@ -8,7 +8,7 @@ function Gallery() {
       kegiatan: "New Journey",
       tanggal: "20 Juli 2026",
       deskripsi:
-        "Kegiatan penerimaan mahasiswa KKN oleh Dukuh dan perangkat Padukuhan Pagerjurang.",
+        "Disini Perjalanan Kita Mulai.",
       icon: "/assets/images/foto1.jpeg",
     },
 
