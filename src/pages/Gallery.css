@@ -1,125 +1,462 @@
 /* =========================================
-   MODAL DOKUMENTASI
+   HERO
 ========================================= */
 
-.gallery-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
+.gallery-hero {
+  min-height: 430px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 30px;
+  text-align: center;
+
+  padding: 80px 20px;
+}
+
+.gallery-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.gallery-hero p {
+  max-width: 850px;
+  font-size: 18px;
+  line-height: 32px;
+  color: white;
 }
 
 
-/* BOX MODAL */
+/* =========================================
+   INTRO
+========================================= */
 
-.gallery-modal {
-  width: 100%;
-  max-width: 1100px;
-  max-height: 90vh;
+.gallery-intro {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.gallery-intro h2 {
+  font-size: 32px;
+  color: #2e7d32;
+}
+
+.gallery-intro p {
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.gallery-timeline {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 80px 20px;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.gallery-title span {
+  display: inline-block;
 
   background: white;
-  border-radius: 18px;
-
-  overflow-y: auto;
-
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-}
-
-
-/* HEADER */
-
-.gallery-modal-header {
-  padding: 30px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  border-bottom: 1px solid #ddd;
-}
-
-
-.gallery-modal-header span {
   color: #2e7d32;
+
+  padding: 10px 25px;
+
+  border-radius: 30px;
+
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+.gallery-title h2 {
+  font-size: 42px;
+  margin: 20px 0 10px;
+  color: white;
+}
+
+.gallery-title p {
+  color: white;
+  font-size: 17px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.gallery-card {
+  background: white;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2);
+
+  transition: 0.3s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* =========================================
+   COVER FOTO
+========================================= */
+
+.gallery-image {
+  width: 100%;
+  height: 230px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s;
+}
+
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.gallery-content {
+  padding: 25px;
+}
+
+.gallery-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.gallery-week {
+  background: #2e7d32;
+  color: white;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
   font-size: 13px;
 }
 
+.gallery-meta small {
+  color: #777;
+}
 
-.gallery-modal-header h2 {
-  margin: 8px 0;
-  color: #222;
+.gallery-content h3 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.gallery-content p {
+  line-height: 28px;
+  color: #555;
 }
 
 
-.gallery-modal-header p {
-  margin: 0;
-  color: #666;
-}
+/* =========================================
+   BUTTON
+========================================= */
 
+.gallery-button {
+  width: 100%;
 
-/* TOMBOL CLOSE */
+  margin-top: 20px;
 
-.gallery-modal-close {
-  width: 42px;
-  height: 42px;
+  padding: 13px 20px;
 
   border: none;
-  border-radius: 50%;
+
+  border-radius: 8px;
 
   background: #2e7d32;
   color: white;
 
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
 
   cursor: pointer;
 
-  flex-shrink: 0;
+  transition: 0.3s;
 }
 
-.gallery-modal-close:hover {
+.gallery-button:hover {
   background: #1b5e20;
 }
 
 
 /* =========================================
-   GRID FOTO
+   STATISTIK
 ========================================= */
 
-.gallery-photo-grid {
-  padding: 30px;
+.gallery-statistics {
+  background: #f5f5f5;
+
+  padding: 70px 20px;
+}
+
+.statistics-container {
+  max-width: 1000px;
+
+  margin: auto;
 
   display: grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    repeat(auto-fit, minmax(200px, 1fr));
 
-  gap: 20px;
+  gap: 25px;
+
+  text-align: center;
+}
+
+.stat-card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h1 {
+  color: #2e7d32;
 }
 
 
-/* ITEM FOTO */
+/* =========================================
+   FOOTER
+========================================= */
 
-.gallery-photo-item {
-  position: relative;
+.gallery-footer {
+  padding: 80px 20px;
 
-  border-radius: 12px;
+  text-align: center;
+}
 
-  overflow: hidden;
+.gallery-footer h2 {
+  color: #2e7d32;
+}
+
+.gallery-footer p {
+  max-width: 850px;
+
+  margin: 20px auto;
+
+  line-height: 30px;
+}
+
+.footer-period {
+  color: #777;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.gallery-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
+}
+
+.gallery-modal-content {
+  width: 100%;
+
+  max-width: 1100px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 30px;
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.gallery-modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #ddd;
+
+  padding-bottom: 20px;
+}
+
+.gallery-modal-header h2 {
+  margin-top: 10px;
+
+  color: #2e7d32;
+
+  font-size: 30px;
+}
+
+.gallery-modal-header p {
+  color: #777;
+
+  margin-top: 5px;
+}
+
+.gallery-modal-week {
+  display: inline-block;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 6px 15px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+}
+
+.gallery-close {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
 
   background: #eee;
 
-  aspect-ratio: 4 / 3;
+  color: #333;
+
+  font-size: 28px;
+
+  line-height: 40px;
+
+  cursor: pointer;
 }
 
+.gallery-close:hover {
+  background: #2e7d32;
+  color: white;
+}
+
+
+/* =========================================
+   MODAL DESCRIPTION
+========================================= */
+
+.gallery-modal-description {
+  margin: 25px 0;
+
+  line-height: 28px;
+
+  color: #555;
+}
+
+
+/* =========================================
+   PHOTO GRID
+========================================= */
+
+.gallery-photo-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(200px, 1fr));
+
+  gap: 15px;
+}
+
+.gallery-photo-item {
+  height: 180px;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background: #eee;
+}
 
 .gallery-photo-item img {
   width: 100%;
@@ -129,72 +466,65 @@
 
   display: block;
 
-  transition: transform 0.3s ease;
+  transition: 0.3s;
 }
-
 
 .gallery-photo-item:hover img {
-  transform: scale(1.05);
-}
-
-
-/* NOMOR FOTO */
-
-.gallery-photo-number {
-  position: absolute;
-
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  padding: 10px;
-
-  color: white;
-
-  font-size: 14px;
-  font-weight: bold;
-
-  background: linear-gradient(
-    transparent,
-    rgba(0, 0, 0, 0.75)
-  );
+  transform: scale(1.08);
 }
 
 
 /* =========================================
-   FOOTER MODAL
+   FOTO FULLSCREEN
 ========================================= */
 
-.gallery-modal-footer {
-  padding: 20px 30px 30px;
+.gallery-photo-preview {
+  position: fixed;
 
-  text-align: center;
+  inset: 0;
 
-  border-top: 1px solid #ddd;
+  z-index: 10000;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
 }
 
+.gallery-photo-preview img {
+  max-width: 95%;
 
-.gallery-close-button {
-  background: #2e7d32;
+  max-height: 90vh;
 
-  color: white;
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+.gallery-preview-close {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
 
   border: none;
 
-  padding: 13px 30px;
+  border-radius: 50%;
 
-  border-radius: 8px;
+  background: white;
 
-  font-size: 16px;
+  color: #222;
 
-  font-weight: bold;
+  font-size: 30px;
 
   cursor: pointer;
-}
-
-
-.gallery-close-button:hover {
-  background: #1b5e20;
 }
 
 
@@ -204,73 +534,57 @@
 
 @media (max-width: 768px) {
 
-  .gallery-modal-overlay {
-    padding: 15px;
+  .gallery-hero {
+    min-height: 380px;
+
+    padding: 70px 20px;
   }
 
-
-  .gallery-modal {
-    max-height: 92vh;
-
-    border-radius: 14px;
+  .gallery-hero h1 {
+    font-size: 34px;
   }
 
+  .gallery-hero p {
+    font-size: 16px;
 
-  .gallery-modal-header {
-    padding: 20px;
-
-    gap: 15px;
+    line-height: 27px;
   }
 
-
-  .gallery-modal-header h2 {
-    font-size: 22px;
+  .gallery-title h2 {
+    font-size: 32px;
   }
 
-
-  .gallery-modal-header p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-
-  .gallery-photo-grid {
-    padding: 15px;
-
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap: 12px;
-  }
-
-
-  .gallery-photo-number {
-    font-size: 12px;
-    padding: 7px;
-  }
-
-}
-
-
-/* HP KECIL */
-
-@media (max-width: 480px) {
-
-  .gallery-photo-grid {
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
-
-  .gallery-modal-header h2 {
-    font-size: 19px;
+  .gallery-image {
+    height: 220px;
   }
 
+  .gallery-modal {
+    padding: 10px;
+  }
 
-  .gallery-modal-close {
-    width: 36px;
-    height: 36px;
+  .gallery-modal-content {
+    padding: 20px;
 
-    font-size: 25px;
+    max-height: 94vh;
+  }
+
+  .gallery-modal-header h2 {
+    font-size: 23px;
+  }
+
+  .gallery-photo-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .gallery-photo-item {
+    height: 140px;
   }
 
 }
